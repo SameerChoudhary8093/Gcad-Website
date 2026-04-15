@@ -1,0 +1,1 @@
+export { CentreOfArtDesignSection } from "./CentreOfArtDesignSection";
