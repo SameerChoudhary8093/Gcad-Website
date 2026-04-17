@@ -6,14 +6,14 @@ const sideCards = [
     title: "Creative Studios",
     label: "STUDIOS",
     description: "State-of-the-art design studios equipped with latest technology and tools",
-    image: "/DSC01034.jpg.jpeg",
+    image: "DSC01034.jpg.jpeg",
   },
   {
     id: "workshops",
     title: "Workshop Spaces",
     label: "WORKSHOPS", 
     description: "Hands-on workshop areas for practical learning and experimentation",
-    image: "/DSC00937.jpg.jpeg",
+    image: "DSC00937.jpg.jpeg",
   },
 ];
 

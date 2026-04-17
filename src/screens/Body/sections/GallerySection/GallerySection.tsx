@@ -2,18 +2,18 @@ import { useState } from "react";
 import { ScrollReveal } from "../../../../components/ScrollReveal";
 
 const galleryImages = [
-  "/DSC00882.jpg.jpeg",
-  "/DSC00897.jpg.jpeg", 
-  "/DSC00919.jpg.jpeg",
-  "/DSC00933.jpg.jpeg",
-  "/DSC00937.jpg.jpeg",
-  "/DSC00941.jpg.jpeg",
-  "/DSC00951.jpg.jpeg",
-  "/DSC00967.jpg.jpeg",
-  "/DSC00988.jpg.jpeg",
-  "/DSC01034.jpg.jpeg",
-  "/DSC00919.jpg.jpeg",
-  "/DSC00897.jpg.jpeg"
+  "DSC00882.jpg.jpeg",
+  "DSC00897.jpg.jpeg", 
+  "DSC00919.jpg.jpeg",
+  "DSC00933.jpg.jpeg",
+  "DSC00937.jpg.jpeg",
+  "DSC00941.jpg.jpeg",
+  "DSC00951.jpg.jpeg",
+  "DSC00967.jpg.jpeg",
+  "DSC00988.jpg.jpeg",
+  "DSC01034.jpg.jpeg",
+  "DSC00919.jpg.jpeg",
+  "DSC00897.jpg.jpeg"
 ];
 
 const categories = ["All", "Events", "Workshops", "Campus", "Students", "Facilities"];

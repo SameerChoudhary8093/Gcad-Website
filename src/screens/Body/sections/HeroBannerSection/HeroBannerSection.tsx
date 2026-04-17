@@ -34,7 +34,7 @@ export const HeroBannerSection = (): JSX.Element => {
       {/* Background */}
       <div className="absolute inset-0 w-full h-full">
         <img
-          src="/DSC00919.jpg.jpeg"
+          src="DSC00919.jpg.jpeg"
           alt="GCAD Campus"
           className="w-full h-full object-cover"
           loading="eager"
@@ -74,19 +74,19 @@ export const HeroBannerSection = (): JSX.Element => {
                 <img
                   className="flex-shrink-0 h-10 sm:h-12 w-auto object-contain bg-white/10 p-2 rounded-lg backdrop-blur-sm"
                   alt="GCAD Logo"
-                  src="/gcad logo.png"
+                  src="gcad-logo.png"
                 />
                 <div className="w-[1px] h-8 bg-white/20"></div>
                 <img
                   className="flex-shrink-0 h-8 sm:h-10 w-auto object-contain bg-white/10 p-2 rounded-lg backdrop-blur-sm"
                   alt="SGVU Logo"
-                  src="/SGVU.png"
+                  src="SGVU.png"
                 />
                 <div className="w-[1px] h-8 bg-white/20"></div>
                 <img
                   className="flex-shrink-0 h-10 sm:h-12 w-auto object-contain bg-white/10 p-2 rounded-lg backdrop-blur-sm"
                   alt="NAAC & NIRF"
-                  src="/NACC&NIRF.png"
+                  src="naac-nirf.png"
                 />
               </div>
             </ScrollReveal>
