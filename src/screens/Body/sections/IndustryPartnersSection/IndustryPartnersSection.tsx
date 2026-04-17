@@ -2,28 +2,46 @@ import { Card, CardContent } from "../../../../components/ui/card";
 
 const partnerCards = [
   {
-    icon: "https://c.animaapp.com/mnyx7rno5LIHte/img/container-1.svg",
+    icon: "🎓",
     title: "Skill & Academic Partners",
-    image: "https://c.animaapp.com/mnyx7rno5LIHte/img/skill-and-academic-partners-logos.png",
+    image: "/Public/DSC00988.jpg.jpeg",
   },
   {
-    icon: "https://c.animaapp.com/mnyx7rno5LIHte/img/container-6.svg",
-    title: "International Collaborations",
-    image: "https://c.animaapp.com/mnyx7rno5LIHte/img/international-collaborations-logos.png",
+    icon: "🌍",
+    title: "International Collaborations", 
+    image: "/Public/DSC00967.jpg.jpeg",
   },
 ];
 
-const graduateCompanies = ["GOOGLE", "NETFLIX", "ZARA", "ADOBE", "LANDOR", "PINTEREST"];
+const graduateCompanies = [
+  { name: "Google", logo: "🔍" },
+  { name: "Microsoft", logo: "🪟" },
+  { name: "Adobe", logo: "🎨" },
+  { name: "Amazon", logo: "📦" },
+  { name: "Netflix", logo: "🎬" },
+  { name: "Meta", logo: "📘" },
+  { name: "Apple", logo: "🍎" },
+  { name: "IBM", logo: "💻" }
+];
+
+const hiringPartners = [
+  { name: "TCS", logo: "💼" },
+  { name: "Infosys", logo: "🏢" },
+  { name: "Wipro", logo: "🌐" },
+  { name: "HCL", logo: "🔧" },
+  { name: "Accenture", logo: "🎯" },
+  { name: "Deloitte", logo: "📊" }
+];
 
 export const IndustryPartnersSection = (): JSX.Element => {
   return (
     <section className="flex flex-col w-full items-start px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24 bg-[#f2f4f7]">
       <div className="flex flex-col max-w-screen-xl items-start gap-12 lg:gap-16 px-8 py-0 w-full mx-auto">
         <div className="flex flex-col items-center gap-2 self-stretch w-full">
-          <p className="[font-family:'Inter',Helvetica] font-normal text-[#904d00] text-sm sm:text-base text-center tracking-[1.60px] leading-6">
+          <p className="font-sans font-normal text-accent-gold text-sm sm:text-base text-center tracking-[1.60px] leading-6">
             GLOBAL ECOSYSTEM
           </p>
-          <h2 className="[font-family:'Plus_Jakarta_Sans',Helvetica] font-extrabold text-[#1a2b48] text-2xl sm:text-3xl lg:text-4xl text-center tracking-[0] leading-10">
+          <h2 className="font-display font-extrabold text-primary-blue text-2xl sm:text-3xl lg:text-4xl text-center tracking-[0] leading-10">
             PLACEMENTS &amp; HIRING PARTNERS
           </h2>
         </div>
@@ -54,21 +72,50 @@ export const IndustryPartnersSection = (): JSX.Element => {
         </div>
         <div className="flex flex-col items-start gap-8 sm:gap-10 pt-12 sm:pt-16 pb-10 sm:pb-12 px-0 self-stretch w-full border-t border-b border-solid border-[#c5c6ce33]">
           <div className="flex flex-col items-center self-stretch w-full">
-            <p className="[font-family:'Inter',Helvetica] font-normal text-[#75777e] text-xs text-center tracking-[3.60px] leading-4 whitespace-nowrap">
+            <p className="font-sans font-normal text-gray-500 text-xs text-center tracking-[3.60px] leading-4 whitespace-nowrap">
               OUR GRADUATES WORK AT
             </p>
           </div>
           <div className="self-stretch w-full overflow-x-auto">
             <div className="inline-flex items-center gap-8 sm:gap-12 lg:gap-16 min-w-max px-2">
               {graduateCompanies.map((company, index) => (
-                <span
+                <div
                   key={index}
-                  className="[font-family:'Inter',Helvetica] font-normal text-[#1a2b4833] text-2xl sm:text-3xl lg:text-4xl tracking-[0] leading-10 whitespace-nowrap"
+                  className="flex flex-col items-center gap-2 group cursor-pointer"
                 >
-                  {company}
-                </span>
+                  <div className="text-4xl sm:text-5xl lg:text-6xl opacity-60 group-hover:opacity-100 transition-opacity duration-300">
+                    {company.logo}
+                  </div>
+                  <span className="font-sans font-medium text-primary-blue text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    {company.name}
+                  </span>
+                </div>
               ))}
             </div>
+          </div>
+        </div>
+
+        {/* Hiring Partners Section */}
+        <div className="flex flex-col items-start gap-8 sm:gap-10 pt-12 sm:pt-16 pb-10 sm:pb-12 px-0 self-stretch w-full">
+          <div className="flex flex-col items-center self-stretch w-full">
+            <p className="font-sans font-normal text-accent-gold text-xs text-center tracking-[3.60px] leading-4 whitespace-nowrap">
+              TOP HIRING PARTNERS
+            </p>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 w-full">
+            {hiringPartners.map((partner, index) => (
+              <div
+                key={index}
+                className="flex flex-col items-center gap-3 p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 cursor-pointer group"
+              >
+                <div className="text-3xl sm:text-4xl">
+                  {partner.logo}
+                </div>
+                <span className="font-sans font-semibold text-primary-blue text-sm text-center">
+                  {partner.name}
+                </span>
+              </div>
+            ))}
           </div>
         </div>
       </div>

@@ -1,8 +1,8 @@
 import { Card, CardContent } from "../../../../components/ui/card";
 
 const sideCards = [
-  { id: 1, image: "https://c.animaapp.com/mnyx7rno5LIHte/img/ab6axua3z4-h9exrhblrjf6fir8-hhvcdjx1qjjekqwxokluj5pkriyoys1w8knm.png", label: "CULTURAL HUB"  },
-  { id: 2, image: "https://c.animaapp.com/mnyx7rno5LIHte/img/ab6axub5ggpcc0pdnthyokdiphiasbblxjrasi7zgukovbu8rzec-ufxvur3dhei.png",  label: "EXHIBITIONS"   },
+  { id: 1, image: "/Public/DSC01034.jpg.jpeg", label: "CULTURAL HUB"  },
+  { id: 2, image: "/Public/DSC00937.jpg.jpeg",  label: "EXHIBITIONS"   },
 ];
 
 export const CampusLifeExperienceSection = (): JSX.Element => {
@@ -28,7 +28,7 @@ export const CampusLifeExperienceSection = (): JSX.Element => {
             <CardContent className="p-0 w-full h-full relative">
               <div
                 className="absolute inset-0 w-full h-full bg-cover bg-center"
-                style={{ backgroundImage: "url(https://c.animaapp.com/mnyx7rno5LIHte/img/events-and-activities-montage.png)" }}
+                style={{ backgroundImage: "url(/Public/DSC00988.jpg.jpeg)" }}
               />
               <div className="absolute inset-0 bg-[linear-gradient(0deg,rgba(26,43,72,0.8)_0%,rgba(26,43,72,0)_50%)]" />
               <div className="flex flex-col items-start gap-2 p-6 sm:p-8 absolute left-0 bottom-0">

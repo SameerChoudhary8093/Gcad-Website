@@ -40,6 +40,13 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // Custom colors from reference website
+        'primary-blue': '#0d244b',
+        'secondary-blue': '#1a459b',
+        'accent-gold': '#c1963f',
+        'light-gold': '#cfa858',
+        'section-bg': '#f6f7f8',
+        'navy-dark': '#0f1f3e',
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -48,6 +55,7 @@ module.exports = {
       },
       fontFamily: {
         sans: [
+          "Lato",
           "ui-sans-serif",
           "system-ui",
           "sans-serif",
@@ -55,6 +63,18 @@ module.exports = {
           '"Segoe UI Emoji"',
           '"Segoe UI Symbol"',
           '"Noto Color Emoji"',
+        ],
+        display: [
+          "Lexend",
+          "Lato",
+          "ui-sans-serif",
+          "system-ui",
+          "sans-serif",
+        ],
+        serif: [
+          "Playfair Display",
+          "Georgia",
+          "serif",
         ],
       },
       keyframes: {
