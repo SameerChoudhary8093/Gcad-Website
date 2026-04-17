@@ -36,23 +36,33 @@ export const MentorshipProgramSection = (): JSX.Element => {
         </ScrollReveal>
 
         {/* Mentor grid: 2 cols on mobile, 3 on tablet, 6 on desktop */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8 sm:gap-10 lg:gap-12 pt-10 w-full">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 sm:gap-8 pt-12 w-full">
           {mentors.map((mentor, index) => (
             <ScrollReveal key={`mentor-${index}`} direction="up" delay={index * 150} className="w-full">
-              <div className="flex flex-col items-center gap-4 w-full">
-                <Avatar className="w-20 h-20 sm:w-24 sm:h-24 lg:w-32 lg:h-32 shadow-[0px_0px_0px_4px_#fd8b00] hover:shadow-[0px_0px_0px_6px_#008f7a] transition-shadow duration-300 rounded-full flex-shrink-0">
-                  <AvatarImage src={mentor.image} alt={mentor.name} className="object-cover" />
-                  <AvatarFallback className="bg-gray-200 text-gray-600 font-bold text-base">
-                    {mentor.name.split(" ").map((n) => n[0]).join("")}
-                  </AvatarFallback>
-                </Avatar>
-                <div className="flex flex-col items-center w-full">
-                  <span className="[font-family:'Plus_Jakarta_Sans',Helvetica] font-bold text-[#1a2b48] text-sm sm:text-base text-center leading-6">
+              <div className="group flex flex-col items-center p-6 bg-gray-50 rounded-2xl border border-transparent hover:border-accent-gold hover:bg-white hover:shadow-xl transition-all duration-500 w-full cursor-pointer h-full">
+                <div className="relative mb-6">
+                  <Avatar className="w-20 h-20 sm:w-24 sm:h-24 lg:w-32 lg:h-32 shadow-lg group-hover:shadow-accent-gold/20 transition-all duration-500 rounded-full flex-shrink-0">
+                    <AvatarImage src={mentor.image} alt={mentor.name} className="object-cover" />
+                    <AvatarFallback className="bg-primary-blue text-white font-bold text-lg">
+                      {mentor.name.split(" ").map((n) => n[0]).join("")}
+                    </AvatarFallback>
+                  </Avatar>
+                  <div className="absolute -bottom-2 right-1/2 translate-x-1/2 bg-accent-gold text-primary-blue text-[8px] font-black px-2 py-0.5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    PRO
+                  </div>
+                </div>
+                <div className="flex flex-col items-center w-full text-center flex-grow">
+                  <h3 className="font-display font-bold text-primary-blue text-sm sm:text-base leading-tight mb-1 group-hover:text-accent-gold transition-colors duration-300">
                     {mentor.name}
-                  </span>
-                  <span className="[font-family:'Inter',Helvetica] font-normal text-[#904d00] text-[10px] text-center tracking-[-0.50px] leading-[15px]">
+                  </h3>
+                  <p className="font-sans font-medium text-gray-500 text-[10px] tracking-widest uppercase leading-tight">
                     {mentor.role}
-                  </span>
+                  </p>
+                </div>
+                <div className="mt-4 pt-4 border-t border-gray-200 w-full flex justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                   <span className="text-primary-blue font-bold text-[10px] flex items-center gap-1">
+                     VIEW BIO <span className="text-accent-gold">→</span>
+                   </span>
                 </div>
               </div>
             </ScrollReveal>

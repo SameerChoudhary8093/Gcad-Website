@@ -1,92 +1,59 @@
 import { Card, CardContent } from "../../../../components/ui/card";
 
-const partnerCards = [
-  {
-    icon: "🎓",
-    title: "Skill & Academic Partners",
-    image: "DSC00988.jpg.jpeg",
-  },
-  {
-    icon: "🌍",
-    title: "International Collaborations", 
-    image: "DSC00967.jpg.jpeg",
-  },
-];
-
 const graduateCompanies = [
-  { name: "Google", logo: "🔍" },
-  { name: "Microsoft", logo: "🪟" },
-  { name: "Adobe", logo: "🎨" },
-  { name: "Amazon", logo: "📦" },
-  { name: "Netflix", logo: "🎬" },
-  { name: "Meta", logo: "📘" },
-  { name: "Apple", logo: "🍎" },
-  { name: "IBM", logo: "💻" }
+  { name: "Google", logo: "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" },
+  { name: "Microsoft", logo: "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" },
+  { name: "Adobe", logo: "https://upload.wikimedia.org/wikipedia/commons/8/8d/Adobe_Corporate_Logo.svg" },
+  { name: "Amazon", logo: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" },
+  { name: "Netflix", logo: "https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" },
+  { name: "Meta", logo: "https://upload.wikimedia.org/wikipedia/commons/7/7b/Meta_Platforms_Inc._logo.svg" },
+  { name: "Apple", logo: "https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" },
+  { name: "IBM", logo: "https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" }
 ];
 
 const hiringPartners = [
-  { name: "TCS", logo: "💼" },
-  { name: "Infosys", logo: "🏢" },
-  { name: "Wipro", logo: "🌐" },
-  { name: "HCL", logo: "🔧" },
-  { name: "Accenture", logo: "🎯" },
-  { name: "Deloitte", logo: "📊" }
+  { name: "TCS", logo: "https://upload.wikimedia.org/wikipedia/commons/b/b1/Tata_Consultancy_Services_Logo.svg" },
+  { name: "Infosys", logo: "https://upload.wikimedia.org/wikipedia/commons/9/95/Infosys_logo.svg" },
+  { name: "Wipro", logo: "https://upload.wikimedia.org/wikipedia/commons/a/a0/Wipro_Primary_Logo_Color_RGB.svg" },
+  { name: "HCL", logo: "https://upload.wikimedia.org/wikipedia/commons/8/84/HCL_Technologies_logo.svg" },
+  { name: "Accenture", logo: "https://upload.wikimedia.org/wikipedia/commons/c/cd/Accenture.svg" },
+  { name: "Deloitte", logo: "https://upload.wikimedia.org/wikipedia/commons/5/56/Deloitte.svg" }
 ];
 
 export const IndustryPartnersSection = (): JSX.Element => {
   return (
     <section className="flex flex-col w-full items-start px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24 bg-[#f2f4f7]">
-      <div className="flex flex-col max-w-screen-xl items-start gap-12 lg:gap-16 px-8 py-0 w-full mx-auto">
+      <div className="flex flex-col max-w-screen-xl items-start gap-12 lg:gap-16 w-full mx-auto">
         <div className="flex flex-col items-center gap-2 self-stretch w-full">
           <p className="font-sans font-normal text-accent-gold text-sm sm:text-base text-center tracking-[1.60px] leading-6">
             GLOBAL ECOSYSTEM
           </p>
-          <h2 className="font-display font-extrabold text-primary-blue text-2xl sm:text-3xl lg:text-4xl text-center tracking-[0] leading-10">
-            PLACEMENTS &amp; HIRING PARTNERS
+          <h2 className="font-display font-extrabold text-primary-blue text-3xl sm:text-4xl lg:text-5xl text-center tracking-[0] leading-tight pb-4">
+            PLACEMENTS & HIRING PARTNERS
           </h2>
+          <div className="w-20 sm:w-24 h-1.5 bg-accent-gold rounded-full" />
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 w-full gap-8 lg:gap-12">
-          {partnerCards.map((card, index) => (
-            <Card
-              key={index}
-              className="relative flex flex-col items-start gap-6 sm:gap-8 p-6 sm:p-10 bg-white rounded-2xl border border-solid border-[#c5c6ce1a] shadow-[0px_2px_4px_-2px_#0000001a,0px_4px_6px_-1px_#0000001a] h-fit"
-            >
-              <CardContent className="p-0 flex flex-col items-start gap-6 sm:gap-8 w-full">
-                <div className="flex items-center gap-3 self-stretch w-full">
-                  <img
-                    className="flex-shrink-0 w-6 h-6"
-                    alt={card.title}
-                    src={card.icon}
-                  />
-                  <span className="[font-family:'Plus_Jakarta_Sans',Helvetica] font-extrabold text-[#1a2b48] text-lg sm:text-xl tracking-[0] leading-7">
-                    {card.title}
-                  </span>
-                </div>
-                <div
-                  className="self-stretch w-full h-64 sm:h-80 lg:h-[502px] rounded-lg bg-cover bg-center"
-                  style={{ backgroundImage: `url(${card.image})` }}
-                />
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-        <div className="flex flex-col items-start gap-8 sm:gap-10 pt-12 sm:pt-16 pb-10 sm:pb-12 px-0 self-stretch w-full border-t border-b border-solid border-[#c5c6ce33]">
+
+        {/* Real Logos Marquee for Graduates */}
+        <div className="flex flex-col items-start gap-8 sm:gap-10 pt-8 pb-12 px-0 self-stretch w-full border-t border-b border-solid border-[#c5c6ce33] overflow-hidden">
           <div className="flex flex-col items-center self-stretch w-full">
-            <p className="font-sans font-normal text-gray-500 text-xs text-center tracking-[3.60px] leading-4 whitespace-nowrap">
+            <p className="font-sans font-normal text-gray-500 text-xs text-center tracking-[3.60px] leading-4 whitespace-nowrap uppercase mb-4">
               OUR GRADUATES WORK AT
             </p>
           </div>
-          <div className="self-stretch w-full overflow-x-auto">
-            <div className="inline-flex items-center gap-8 sm:gap-12 lg:gap-16 min-w-max px-2">
-              {graduateCompanies.map((company, index) => (
+          <div className="relative w-full">
+             <div className="flex gap-12 sm:gap-16 lg:gap-24 animate-marquee-slow whitespace-nowrap items-center">
+              {[...graduateCompanies, ...graduateCompanies].map((company, index) => (
                 <div
                   key={index}
-                  className="flex flex-col items-center gap-2 group cursor-pointer"
+                  className="flex flex-col items-center gap-2 group cursor-pointer grayscale hover:grayscale-0 transition-all duration-500"
                 >
-                  <div className="text-4xl sm:text-5xl lg:text-6xl opacity-60 group-hover:opacity-100 transition-opacity duration-300">
-                    {company.logo}
-                  </div>
-                  <span className="font-sans font-medium text-primary-blue text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <img
+                    src={company.logo}
+                    alt={company.name}
+                    className="h-10 sm:h-12 lg:h-14 object-contain opacity-60 group-hover:opacity-100 transition-opacity"
+                  />
+                  <span className="font-sans font-semibold text-primary-blue text-[10px] uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity">
                     {company.name}
                   </span>
                 </div>
@@ -95,10 +62,10 @@ export const IndustryPartnersSection = (): JSX.Element => {
           </div>
         </div>
 
-        {/* Hiring Partners Section */}
-        <div className="flex flex-col items-start gap-8 sm:gap-10 pt-12 sm:pt-16 pb-10 sm:pb-12 px-0 self-stretch w-full">
+        {/* Hiring Partners Grid */}
+        <div className="flex flex-col items-start gap-8 sm:gap-10 pt-4 pb-10 sm:pb-12 px-0 self-stretch w-full">
           <div className="flex flex-col items-center self-stretch w-full">
-            <p className="font-sans font-normal text-accent-gold text-xs text-center tracking-[3.60px] leading-4 whitespace-nowrap">
+            <p className="font-sans font-normal text-accent-gold text-xs text-center tracking-[3.60px] leading-4 whitespace-nowrap uppercase mb-4">
               TOP HIRING PARTNERS
             </p>
           </div>
@@ -106,12 +73,16 @@ export const IndustryPartnersSection = (): JSX.Element => {
             {hiringPartners.map((partner, index) => (
               <div
                 key={index}
-                className="flex flex-col items-center gap-3 p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 cursor-pointer group"
+                className="flex flex-col items-center justify-center gap-4 p-8 bg-white rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer group"
               >
-                <div className="text-3xl sm:text-4xl">
-                  {partner.logo}
+                <div className="h-12 w-full flex items-center justify-center grayscale group-hover:grayscale-0 transition-all duration-500">
+                   <img
+                    src={partner.logo}
+                    alt={partner.name}
+                    className="max-h-full max-w-full object-contain"
+                  />
                 </div>
-                <span className="font-sans font-semibold text-primary-blue text-sm text-center">
+                <span className="font-sans font-bold text-primary-blue text-xs text-center opacity-0 group-hover:opacity-100 transition-opacity">
                   {partner.name}
                 </span>
               </div>
@@ -119,6 +90,18 @@ export const IndustryPartnersSection = (): JSX.Element => {
           </div>
         </div>
       </div>
+      <style>{`
+        @keyframes marquee-slow {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(calc(-50% - 3rem)); }
+        }
+        .animate-marquee-slow {
+          display: flex;
+          width: max-content;
+          animation: marquee-slow 30s linear infinite;
+        }
+      `}</style>
     </section>
   );
 };
+

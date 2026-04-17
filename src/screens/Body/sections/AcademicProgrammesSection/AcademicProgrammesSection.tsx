@@ -63,25 +63,25 @@ export const AcademicProgrammesSection = (): JSX.Element => {
           {programmes.map((programme, index) => (
             <ScrollReveal key={index} direction="up" delay={index * 200}>
               <Card
-                className="flex flex-col items-start bg-white rounded-tl-3xl rounded-br-3xl rounded-tr-md rounded-bl-md overflow-hidden border-2 border-accent-gold shadow-lg hover:shadow-xl transition-shadow duration-300 h-fit p-0"
+                className="group flex flex-col items-start bg-white rounded-tl-3xl rounded-br-3xl rounded-tr-md rounded-bl-md overflow-hidden border-2 border-accent-gold shadow-lg hover:shadow-2xl hover:border-primary-blue hover:scale-[1.02] transition-all duration-300 h-full p-0 cursor-pointer"
               >
                 <div className="h-56 sm:h-64 w-full flex-shrink-0 overflow-hidden">
                   <img
                     src={programme.image}
                     alt={programme.title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     loading="lazy"
                   />
                 </div>
-                <CardContent className="flex flex-col items-start p-6 sm:p-8 w-full bg-white relative">
-                  <div className="absolute top-0 right-0 w-16 h-16 bg-accent-gold rounded-bl-full opacity-20" />
-                  <div className="absolute top-0 left-0 w-2 h-full bg-accent-gold opacity-30" />
+                <CardContent className="flex flex-col items-start p-6 sm:p-8 w-full bg-white relative flex-grow">
+                  <div className="absolute top-0 right-0 w-16 h-16 bg-accent-gold rounded-bl-full opacity-20 group-hover:bg-primary-blue transition-colors duration-300" />
+                  <div className="absolute top-0 left-0 w-1.5 h-full bg-accent-gold opacity-30 group-hover:bg-primary-blue transition-colors duration-300" />
                   <div className="pb-4 w-full relative z-10">
-                    <h3 className="w-full font-sans font-extrabold text-primary-blue text-xl sm:text-2xl leading-8 whitespace-pre-line">
+                    <h3 className="w-full font-sans font-extrabold text-primary-blue text-xl sm:text-2xl leading-8 whitespace-pre-line group-hover:text-accent-gold transition-colors duration-300">
                       {programme.title}
                     </h3>
                   </div>
-                  <div className="flex flex-col gap-3 w-full relative z-10">
+                  <div className="flex flex-col gap-3 w-full relative z-10 flex-grow">
                     {programme.specializations.map((spec, specIndex) => (
                       <p
                         key={specIndex}

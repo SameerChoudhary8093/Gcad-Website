@@ -110,33 +110,7 @@ export const AchievementsSection = (): JSX.Element => {
             </div>
           </div>
 
-          {/* Additional Info */}
-          <div className="mt-16 text-center">
-            <ScrollReveal direction="up" delay={1100}>
-              <div className="bg-gray-50 rounded-2xl p-8">
-                <h4 className="font-display font-bold text-primary-blue text-2xl mb-4">
-                  Industry Recognition
-                </h4>
-                <p className="font-sans text-gray-600 max-w-3xl mx-auto mb-6">
-                  GCAD has been recognized as one of the leading design institutions in India, 
-                  with our students winning prestigious awards and working with renowned brands 
-                  across the globe. Our commitment to excellence in design education has earned 
-                  us numerous accolades from industry leaders and educational bodies.
-                </p>
-                <div className="flex flex-wrap justify-center gap-4">
-                  <span className="px-4 py-2 bg-accent-gold/20 text-accent-gold rounded-full text-sm font-sans font-medium">
-                    🏆 Best Design College 2024
-                  </span>
-                  <span className="px-4 py-2 bg-accent-gold/20 text-accent-gold rounded-full text-sm font-sans font-medium">
-                    🎨 Industry Excellence Award
-                  </span>
-                  <span className="px-4 py-2 bg-accent-gold/20 text-accent-gold rounded-full text-sm font-sans font-medium">
-                    🌟 Innovation in Education
-                  </span>
-                </div>
-              </div>
-            </ScrollReveal>
-          </div>
+
         </div>
       </div>
     </section>
