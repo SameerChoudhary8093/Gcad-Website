@@ -22,83 +22,79 @@ const hiringPartners = [
 
 export const IndustryPartnersSection = (): JSX.Element => {
   return (
-    <section className="flex flex-col w-full items-start px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24 bg-[#f2f4f7]">
-      <div className="flex flex-col max-w-screen-xl items-start gap-12 lg:gap-16 w-full mx-auto">
+    <section id="placements" className="flex flex-col w-full items-start px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24 bg-white relative overflow-hidden">
+      <div className="absolute top-0 left-0 w-64 h-64 bg-accent-gold/5 rounded-full blur-3xl pointer-events-none" />
+      
+      <div className="flex flex-col max-w-screen-xl items-start gap-12 lg:gap-16 w-full mx-auto relative z-10">
         <div className="flex flex-col items-center gap-2 self-stretch w-full">
-          <p className="font-sans font-normal text-accent-gold text-sm sm:text-base text-center tracking-[1.60px] leading-6">
+          <p className="font-sans font-bold text-accent-gold text-sm sm:text-base text-center tracking-[4px] leading-6 uppercase">
             GLOBAL ECOSYSTEM
           </p>
-          <h2 className="font-display font-extrabold text-primary-blue text-3xl sm:text-4xl lg:text-5xl text-center tracking-[0] leading-tight pb-4">
-            PLACEMENTS & HIRING PARTNERS
+          <h2 className="font-display font-black text-primary-blue text-4xl sm:text-5xl lg:text-7xl text-center tracking-tighter leading-tight pb-4">
+            PLACEMENTS & <span className="text-accent-gold font-serif italic font-normal">Hiring Partners</span>
           </h2>
-          <div className="w-20 sm:w-24 h-1.5 bg-accent-gold rounded-full" />
+          <div className="w-24 h-1 bg-accent-gold rounded-full" />
         </div>
 
-        {/* Real Logos Marquee for Graduates */}
-        <div className="flex flex-col items-start gap-8 sm:gap-10 pt-8 pb-12 px-0 self-stretch w-full border-t border-b border-solid border-[#c5c6ce33] overflow-hidden">
-          <div className="flex flex-col items-center self-stretch w-full">
-            <p className="font-sans font-normal text-gray-500 text-xs text-center tracking-[3.60px] leading-4 whitespace-nowrap uppercase mb-4">
-              OUR GRADUATES WORK AT
-            </p>
-          </div>
+        {/* Bidirectional Logo Marquees */}
+        <div className="flex flex-col gap-12 sm:gap-16 w-full py-8 border-y border-gray-100 overflow-hidden">
+          
+          {/* Row 1: Graduates - Slides Left */}
           <div className="relative w-full">
-             <div className="flex gap-12 sm:gap-16 lg:gap-24 animate-marquee-slow whitespace-nowrap items-center">
+             <div className="flex gap-16 sm:gap-24 lg:gap-32 animate-marquee-left whitespace-nowrap items-center">
               {[...graduateCompanies, ...graduateCompanies].map((company, index) => (
                 <div
-                  key={index}
-                  className="flex flex-col items-center gap-2 group cursor-pointer grayscale hover:grayscale-0 transition-all duration-500"
+                  key={`grad-${index}`}
+                  className="flex flex-col items-center justify-center min-w-[120px] transition-transform duration-300 hover:scale-110"
                 >
                   <img
                     src={company.logo}
                     alt={company.name}
-                    className="h-10 sm:h-12 lg:h-14 object-contain opacity-60 group-hover:opacity-100 transition-opacity"
+                    className="h-10 sm:h-12 lg:h-16 object-contain"
                   />
-                  <span className="font-sans font-semibold text-primary-blue text-[10px] uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity">
-                    {company.name}
-                  </span>
                 </div>
               ))}
             </div>
           </div>
-        </div>
 
-        {/* Hiring Partners Grid */}
-        <div className="flex flex-col items-start gap-8 sm:gap-10 pt-4 pb-10 sm:pb-12 px-0 self-stretch w-full">
-          <div className="flex flex-col items-center self-stretch w-full">
-            <p className="font-sans font-normal text-accent-gold text-xs text-center tracking-[3.60px] leading-4 whitespace-nowrap uppercase mb-4">
-              TOP HIRING PARTNERS
-            </p>
-          </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 w-full">
-            {hiringPartners.map((partner, index) => (
-              <div
-                key={index}
-                className="flex flex-col items-center justify-center gap-4 p-8 bg-white rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer group"
-              >
-                <div className="h-12 w-full flex items-center justify-center grayscale group-hover:grayscale-0 transition-all duration-500">
-                   <img
+          {/* Row 2: Hiring Partners - Slides Right */}
+          <div className="relative w-full">
+             <div className="flex gap-16 sm:gap-24 lg:gap-32 animate-marquee-right whitespace-nowrap items-center">
+              {[...hiringPartners, ...hiringPartners, ...hiringPartners].map((partner, index) => (
+                <div
+                  key={`partner-${index}`}
+                  className="flex flex-col items-center justify-center min-w-[120px] transition-transform duration-300 hover:scale-110"
+                >
+                  <img
                     src={partner.logo}
                     alt={partner.name}
-                    className="max-h-full max-w-full object-contain"
+                    className="h-10 sm:h-12 lg:h-16 object-contain"
                   />
                 </div>
-                <span className="font-sans font-bold text-primary-blue text-xs text-center opacity-0 group-hover:opacity-100 transition-opacity">
-                  {partner.name}
-                </span>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
+
         </div>
       </div>
       <style>{`
-        @keyframes marquee-slow {
+        @keyframes marquee-left {
           0% { transform: translateX(0); }
-          100% { transform: translateX(calc(-50% - 3rem)); }
+          100% { transform: translateX(calc(-50% - 4rem)); }
         }
-        .animate-marquee-slow {
+        @keyframes marquee-right {
+          0% { transform: translateX(calc(-50% - 4rem)); }
+          100% { transform: translateX(0); }
+        }
+        .animate-marquee-left {
           display: flex;
           width: max-content;
-          animation: marquee-slow 30s linear infinite;
+          animation: marquee-left 40s linear infinite;
+        }
+        .animate-marquee-right {
+          display: flex;
+          width: max-content;
+          animation: marquee-right 40s linear infinite;
         }
       `}</style>
     </section>

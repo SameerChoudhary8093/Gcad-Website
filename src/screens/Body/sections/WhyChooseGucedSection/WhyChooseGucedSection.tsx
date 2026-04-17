@@ -12,10 +12,12 @@ const reasons = [
 
 export const WhyChooseGucedSection = (): JSX.Element => {
   return (
-    <section className="relative flex flex-col w-full items-start px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24 overflow-hidden">
+    <section id="why-choose" className="relative flex flex-col w-full items-start px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24 overflow-hidden bg-[#0D244B]">
       {/* Bauhaus-inspired artistic shapes */}
-      <div className="absolute top-0 right-0 w-48 h-48 sm:w-64 sm:h-64 bg-[#1a2b48] bg-opacity-5 rounded-bl-full pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-40 h-40 sm:w-48 sm:h-48 bg-[#fd8b00] bg-opacity-10 rounded-tr-full pointer-events-none" />
+      <div className="absolute top-0 right-0 w-48 h-48 sm:w-64 sm:h-64 bg-white opacity-5 rounded-bl-full pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-40 h-40 sm:w-48 sm:h-48 bg-accent-gold opacity-10 rounded-tr-full pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] border-[2px] border-white/5 rounded-full pointer-events-none" />
+
       <div className="absolute top-1/4 left-10 w-20 h-20 bg-[#008f7a] bg-opacity-20 rounded-full pointer-events-none hidden lg:block" />
 
       <div className="relative z-10 flex flex-col lg:flex-row max-w-screen-xl items-center gap-12 lg:gap-16 w-full mx-auto">
@@ -24,11 +26,11 @@ export const WhyChooseGucedSection = (): JSX.Element => {
         <div className="flex flex-col items-start gap-8 lg:gap-10 w-full lg:flex-1">
           <ScrollReveal direction="up" delay={100}>
             <div className="flex flex-col items-start gap-2 w-full">
-              <span className="font-sans font-normal text-accent-gold text-sm sm:text-base tracking-[1.60px] leading-6">
-                REASONS
-              </span>
-              <h2 className="font-display font-extrabold text-white text-4xl sm:text-5xl tracking-[0] leading-tight w-full">
+              <span className="font-sans font-bold text-accent-gold text-sm sm:text-base tracking-[4px] leading-6 uppercase">
                 WHY GCAD?
+              </span>
+              <h2 className="font-display font-black text-white text-4xl sm:text-5xl lg:text-7xl tracking-tighter leading-tight w-full">
+                Design Your <span className="text-accent-gold font-serif italic font-normal">Future</span>
               </h2>
             </div>
           </ScrollReveal>

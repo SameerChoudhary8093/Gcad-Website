@@ -37,24 +37,24 @@ const programmes = [
 
 export const AcademicProgrammesSection = (): JSX.Element => {
   return (
-    <section className="relative flex flex-col w-full items-start px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24 overflow-hidden">
+    <section id="programs" className="relative flex flex-col w-full items-start px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24 overflow-hidden bg-white">
       {/* Decorative geometric shapes */}
-      <div className="absolute top-[-5%] left-[-5%] w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] border-[40px] sm:border-[50px] border-accent-gold rounded-full pointer-events-none opacity-20" />
-      <div className="absolute bottom-0 right-0 w-64 h-64 sm:w-80 sm:h-80 bg-[#008f7a] rounded-tl-full pointer-events-none opacity-30" />
-      <div className="absolute top-1/4 right-10 w-16 h-16 bg-[#e07d00] rounded-sm pointer-events-none hidden lg:block rotate-12" />
+      <div className="absolute top-[-5%] left-[-5%] w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] border-[2px] border-accent-gold rounded-full pointer-events-none opacity-40 animate-pulse" />
+      <div className="absolute bottom-0 right-0 w-64 h-64 sm:w-80 sm:h-80 bg-[#0D244B]/5 rounded-tl-full pointer-events-none" />
+      <div className="absolute top-1/4 right-10 w-16 h-16 border-2 border-[#e07d00] rounded-sm pointer-events-none hidden lg:block rotate-12" />
 
       <div className="relative z-10 flex flex-col max-w-screen-xl items-start gap-12 lg:gap-16 w-full mx-auto">
 
         {/* Header */}
         <ScrollReveal direction="down" className="w-full">
           <div className="flex flex-col items-center gap-2 w-full">
-            <span className="font-sans font-normal text-accent-gold text-sm sm:text-base text-center tracking-[1.60px] leading-6">
-              JOIN OUR
+            <span className="font-sans font-bold text-accent-gold text-sm sm:text-base text-center tracking-[4px] leading-6 uppercase">
+              Explore Our
             </span>
-            <h2 className="font-display font-extrabold text-white text-3xl sm:text-4xl lg:text-5xl text-center tracking-[0] leading-tight pb-4">
-              ACADEMIC PROGRAMMES
+            <h2 className="font-display font-black text-primary-blue text-3xl sm:text-4xl lg:text-6xl text-center tracking-tight leading-tight pb-4">
+              ACADEMIC <span className="text-accent-gold font-serif italic font-normal">Programmes</span>
             </h2>
-            <div className="w-20 sm:w-24 h-1.5 bg-accent-gold rounded-full" />
+            <div className="w-24 sm:w-32 h-1 bg-accent-gold rounded-full" />
           </div>
         </ScrollReveal>
 

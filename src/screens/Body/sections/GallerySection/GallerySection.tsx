@@ -27,32 +27,36 @@ export const GallerySection = (): JSX.Element => {
     : galleryImages; // In real implementation, filter by category
 
   return (
-    <section className="bg-primary-blue py-16 sm:py-20 lg:py-24">
-      <div className="px-4 sm:px-6 lg:px-8">
+    <section className="bg-white py-16 sm:py-20 lg:py-24 relative overflow-hidden">
+      {/* Artistic Elements */}
+      <div className="absolute top-0 right-0 w-64 h-64 bg-accent-gold/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary-blue/5 rounded-full blur-3xl pointer-events-none" />
+
+      <div className="px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-screen-xl mx-auto">
           {/* Header */}
           <div className="text-center mb-12">
             <ScrollReveal direction="up" delay={200}>
-              <h2 className="font-display font-extrabold text-white text-4xl sm:text-5xl lg:text-6xl mb-4">
-                Gallery
+              <h2 className="font-display font-black text-primary-blue text-4xl sm:text-5xl lg:text-7xl mb-4 tracking-tighter">
+                Visual <span className="text-accent-gold font-serif italic font-normal">Narratives</span>
               </h2>
-              <div className="w-20 h-1.5 bg-accent-gold rounded-full mx-auto mb-8"></div>
-              <p className="font-sans text-gray-300 text-lg max-w-2xl mx-auto">
-                Explore the vibrant campus life, creative works, and memorable moments at GCAD
+              <div className="w-24 h-1 bg-accent-gold mx-auto mb-8"></div>
+              <p className="font-sans font-medium text-gray-500 text-sm sm:text-lg max-w-3xl mx-auto leading-relaxed">
+                Explore the vibrant campus life, creative works, and memorable moments at GCAD through our lens.
               </p>
             </ScrollReveal>
           </div>
 
           {/* Category Filter */}
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
+          <div className="flex flex-wrap justify-center gap-3 mb-16">
             {categories.map((category, index) => (
               <ScrollReveal key={category} direction="up" delay={300 + index * 100}>
                 <button
                   onClick={() => setSelectedCategory(category)}
-                  className={`px-6 py-2 rounded-full font-sans font-medium transition-all duration-300 ${
+                  className={`px-8 py-2 rounded-full font-sans font-bold text-xs tracking-widest uppercase transition-all duration-300 border ${
                     selectedCategory === category
-                      ? "bg-accent-gold text-primary-blue"
-                      : "bg-white/10 text-white hover:bg-white/20"
+                      ? "bg-primary-blue text-white border-primary-blue shadow-lg"
+                      : "bg-white text-gray-400 border-gray-200 hover:border-accent-gold hover:text-accent-gold"
                   }`}
                 >
                   {category}

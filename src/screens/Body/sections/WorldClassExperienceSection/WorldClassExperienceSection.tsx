@@ -26,16 +26,17 @@ const studios = [
 
 export const WorldClassExperienceSection = (): JSX.Element => {
   return (
-    <section className="flex flex-col w-full items-start gap-10 sm:gap-12 px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24 bg-[#f7f9fc] overflow-hidden">
+    <section id="infrastructure" className="flex flex-col w-full items-start gap-10 sm:gap-12 px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24 bg-[#0D244B] overflow-hidden">
       {/* Header */}
       <div className="flex max-w-screen-xl items-end justify-between w-full mx-auto">
         <div className="flex flex-col items-start gap-2">
-          <p className="[font-family:'Inter',Helvetica] font-normal text-[#904d00] text-sm sm:text-base tracking-[1.60px] leading-6 whitespace-nowrap">
+          <p className="font-sans font-bold text-accent-gold text-sm sm:text-base tracking-[4px] leading-6 uppercase">
             THE WORKSPACE
           </p>
-          <h2 className="[font-family:'Plus_Jakarta_Sans',Helvetica] font-extrabold text-[#1a2b48] text-3xl sm:text-4xl tracking-[0] leading-10 whitespace-nowrap">
-            WORLD-CLASS STUDIOS
+          <h2 className="font-display font-black text-white text-3xl sm:text-4xl lg:text-7xl tracking-tighter leading-tight whitespace-nowrap">
+            WORLD-CLASS <span className="text-accent-gold font-serif italic font-normal">Studios</span>
           </h2>
+          <div className="w-24 h-1 bg-accent-gold mt-4" />
         </div>
       </div>
 
@@ -55,7 +56,7 @@ export const WorldClassExperienceSection = (): JSX.Element => {
                   />
                   <div
                     className="absolute inset-0 w-full h-full opacity-80 transition-opacity duration-300 group-hover:opacity-90"
-                    style={{ background: "linear-gradient(0deg, rgba(26,43,72,1) 0%, rgba(26,43,72,0) 60%)" }}
+                    style={{ background: "linear-gradient(0deg, #0D244B 0%, rgba(13,36,75,0) 60%)" }}
                   />
                   <div className="absolute left-0 bottom-0 flex flex-col gap-2 p-6 sm:p-8 w-full">
                     <h3 className="[font-family:'Plus_Jakarta_Sans',Helvetica] font-bold text-white text-xl sm:text-2xl leading-8 group-hover:text-accent-gold transition-colors duration-300">

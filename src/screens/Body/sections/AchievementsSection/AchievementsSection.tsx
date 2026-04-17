@@ -32,18 +32,22 @@ const stats = [
 
 export const AchievementsSection = (): JSX.Element => {
   return (
-    <section className="bg-white py-16 sm:py-20 lg:py-24">
-      <div className="px-4 sm:px-6 lg:px-8">
+    <section className="bg-[#0D244B] py-16 sm:py-20 lg:py-24 relative overflow-hidden text-white">
+      {/* Background Decor */}
+      <div className="absolute top-0 left-0 w-64 h-64 bg-accent-gold/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl pointer-events-none" />
+
+      <div className="px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-screen-xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16">
             <ScrollReveal direction="up" delay={200}>
-              <h2 className="font-display font-extrabold text-primary-blue text-4xl sm:text-5xl lg:text-6xl mb-4">
-                Our Achievements
+              <h2 className="font-display font-black text-white text-4xl sm:text-5xl lg:text-7xl mb-4 tracking-tighter">
+                Our <span className="text-accent-gold font-serif italic font-normal">Impact</span>
               </h2>
-              <div className="w-20 h-1.5 bg-accent-gold rounded-full mx-auto mb-6"></div>
-              <p className="font-sans text-gray-600 text-lg max-w-2xl mx-auto">
-                Celebrating excellence in design education and student success
+              <div className="w-24 h-1 bg-accent-gold mx-auto mb-6"></div>
+              <p className="font-sans font-medium text-gray-400 text-sm sm:text-lg max-w-3xl mx-auto leading-relaxed">
+                Celebrating excellence in design education and student success across the globe.
               </p>
             </ScrollReveal>
           </div>
@@ -54,17 +58,17 @@ export const AchievementsSection = (): JSX.Element => {
               <ScrollReveal key={index} direction="up" delay={300 + index * 100}>
                 <div className="text-center group">
                   <div className="relative mb-6">
-                    <div className="w-24 h-24 mx-auto bg-accent-gold rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      <span className="font-display font-bold text-primary-blue text-2xl">
+                    <div className="w-24 h-24 mx-auto bg-accent-gold rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-[0px_0px_20px_#c1963f40]">
+                      <span className="font-display font-black text-[#0D244B] text-2xl">
                         {achievement.number}
                       </span>
                     </div>
                     <div className="absolute inset-0 w-24 h-24 mx-auto bg-accent-gold rounded-full animate-ping opacity-20"></div>
                   </div>
-                  <h3 className="font-display font-bold text-primary-blue text-xl mb-2">
+                  <h3 className="font-display font-bold text-white text-xl mb-2 group-hover:text-accent-gold transition-colors">
                     {achievement.label}
                   </h3>
-                  <p className="font-sans text-gray-600 text-sm leading-relaxed">
+                  <p className="font-sans font-medium text-gray-400 text-sm leading-relaxed">
                     {achievement.description}
                   </p>
                 </div>
@@ -73,13 +77,13 @@ export const AchievementsSection = (): JSX.Element => {
           </div>
 
           {/* Stats Section */}
-          <div className="bg-primary-blue rounded-2xl p-8 sm:p-12">
-            <div className="text-center mb-8">
+          <div className="bg-white/5 backdrop-blur-md rounded-2xl p-8 sm:p-12 border border-white/10 shadow-2xl">
+            <div className="text-center mb-12">
               <ScrollReveal direction="up" delay={500}>
-                <h3 className="font-display font-extrabold text-white text-3xl sm:text-4xl mb-4">
-                  Placement Statistics
+                <h3 className="font-display font-black text-white text-3xl sm:text-5xl mb-4 tracking-tighter">
+                  Placement <span className="text-accent-gold font-serif italic font-normal">Statistics</span>
                 </h3>
-                <div className="w-16 h-1 bg-accent-gold rounded-full mx-auto"></div>
+                <div className="w-16 h-1 bg-accent-gold mx-auto"></div>
               </ScrollReveal>
             </div>
 
@@ -87,11 +91,11 @@ export const AchievementsSection = (): JSX.Element => {
               {stats.map((stat, index) => (
                 <ScrollReveal key={index} direction="up" delay={600 + index * 100}>
                   <div className="text-center">
-                    <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-colors duration-300">
-                      <div className="font-display font-bold text-accent-gold text-3xl sm:text-4xl mb-2">
+                    <div className="bg-white/5 border border-white/5 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 group">
+                      <div className="font-display font-black text-accent-gold text-3xl sm:text-5xl mb-2 group-hover:scale-110 transition-transform">
                         {stat.value}
                       </div>
-                      <div className="font-sans text-white text-sm">
+                      <div className="font-sans font-bold text-gray-400 text-xs uppercase tracking-widest">
                         {stat.label}
                       </div>
                     </div>
@@ -101,9 +105,9 @@ export const AchievementsSection = (): JSX.Element => {
             </div>
 
             {/* CTA Button */}
-            <div className="text-center mt-8">
+            <div className="text-center mt-12">
               <ScrollReveal direction="up" delay={1000}>
-                <button className="px-8 py-3 bg-accent-gold text-primary-blue font-sans font-bold rounded-lg hover:bg-light-gold transition-colors duration-300">
+                <button className="px-12 py-4 bg-accent-gold text-[#0D244B] font-sans font-black text-sm uppercase tracking-widest rounded-full hover:bg-light-gold transition-all duration-300 shadow-[0px_10px_20px_#c1963f40]">
                   View Placement Report
                 </button>
               </ScrollReveal>

@@ -41,12 +41,12 @@ module.exports = {
           foreground: "hsl(var(--card-foreground))",
         },
         // Custom colors from reference website
-        'primary-blue': '#0d244b',
+        'primary-blue': '#0D244B',
         'secondary-blue': '#1a459b',
         'accent-gold': '#c1963f',
         'light-gold': '#cfa858',
         'section-bg': '#f6f7f8',
-        'navy-dark': '#0f1f3e',
+        'navy-dark': '#0D244B',
       },
       borderRadius: {
         lg: "var(--radius)",

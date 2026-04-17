@@ -36,47 +36,47 @@ export const FAQsSection = (): JSX.Element => {
   };
 
   return (
-    <section className="bg-white py-16 sm:py-20 lg:py-24">
-      <div className="px-4 sm:px-6 lg:px-8">
+    <section className="bg-white py-16 sm:py-20 lg:py-24 relative overflow-hidden">
+      <div className="absolute top-1/2 left-0 -translate-y-1/2 w-96 h-96 bg-accent-gold/5 rounded-full blur-3xl pointer-events-none" />
+      
+      <div className="px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-screen-xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-12">
-            <h2 className="font-display font-extrabold text-primary-blue text-4xl sm:text-5xl lg:text-6xl mb-4">
-              Frequently Asked Questions
+          <div className="text-center mb-16">
+            <h2 className="font-display font-black text-primary-blue text-4xl sm:text-5xl lg:text-7xl mb-4 tracking-tighter">
+              Curiosity <span className="text-accent-gold font-serif italic font-normal">& Answers</span>
             </h2>
-            <div className="w-20 h-1.5 bg-accent-gold rounded-full mx-auto"></div>
+            <div className="w-24 h-1 bg-accent-gold mx-auto mb-8"></div>
+            <p className="font-sans font-medium text-gray-500 text-sm sm:text-lg max-w-2xl mx-auto leading-relaxed">
+              Everything you need to know about starting your creative journey with GCAD.
+            </p>
           </div>
 
           {/* FAQs */}
-          <div className="max-w-3xl mx-auto space-y-4">
+          <div className="max-w-4xl mx-auto space-y-6">
             {faqs.map((faq, index) => (
               <div 
                 key={index} 
-                className="border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300"
+                className={`group border-b border-gray-100 transition-all duration-500 ${openIndex === index ? 'pb-6' : 'pb-0'}`}
               >
                 <button
                   onClick={() => toggleFAQ(index)}
-                  className="w-full px-6 py-4 text-left flex items-center justify-between bg-white hover:bg-gray-50 transition-colors duration-200"
+                  className="w-full py-6 text-left flex items-center justify-between bg-white hover:bg-gray-50/50 transition-all duration-300 rounded-xl px-6"
                 >
-                  <span className="font-sans font-semibold text-primary-blue text-lg pr-4">
+                  <span className={`font-sans font-bold text-lg sm:text-xl transition-colors duration-300 ${openIndex === index ? 'text-accent-gold' : 'text-primary-blue'}`}>
+                    <span className="text-accent-gold/40 mr-4 font-serif italic">{String(index + 1).padStart(2, '0')}</span>
                     {faq.question}
                   </span>
-                  <div className="flex-shrink-0">
-                    {openIndex === index ? (
-                      <ChevronUp className="w-5 h-5 text-accent-gold" />
-                    ) : (
-                      <ChevronDown className="w-5 h-5 text-accent-gold" />
-                    )}
+                  <div className={`flex-shrink-0 w-8 h-8 rounded-full border border-accent-gold/20 flex items-center justify-center transition-transform duration-500 ${openIndex === index ? 'rotate-180 bg-accent-gold' : ''}`}>
+                    <ChevronDown className={`w-4 h-4 transition-colors ${openIndex === index ? 'text-white' : 'text-accent-gold'}`} />
                   </div>
                 </button>
                 
-                {openIndex === index && (
-                  <div className="px-6 py-4 bg-gray-50 border-t border-gray-200">
-                    <p className="font-sans text-gray-600 leading-relaxed">
-                      {faq.answer}
-                    </p>
-                  </div>
-                )}
+                <div className={`overflow-hidden transition-all duration-500 px-6 ${openIndex === index ? 'max-h-96 opacity-100 mt-2' : 'max-h-0 opacity-0'}`}>
+                  <p className="font-sans font-medium text-gray-500 text-sm sm:text-lg leading-relaxed border-l-2 border-accent-gold pl-6 py-2">
+                    {faq.answer}
+                  </p>
+                </div>
               </div>
             ))}
           </div>

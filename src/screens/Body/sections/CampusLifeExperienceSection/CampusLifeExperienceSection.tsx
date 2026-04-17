@@ -19,17 +19,18 @@ const sideCards = [
 
 export const CampusLifeExperienceSection = (): JSX.Element => {
   return (
-    <section className="flex flex-col w-full items-start px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24 bg-[#f2f4f7]">
+    <section className="flex flex-col w-full items-start px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24 bg-[#0D244B] overflow-hidden text-white">
       <div className="flex flex-col max-w-screen-xl items-start gap-10 lg:gap-12 w-full mx-auto">
 
         {/* Header */}
-        <div className="flex flex-col items-start gap-2 w-full">
-          <h2 className="[font-family:'Plus_Jakarta_Sans',Helvetica] font-extrabold text-[#1a2b48] text-3xl sm:text-4xl tracking-[0] leading-10">
+        <div className="flex flex-col items-start gap-2 w-full relative z-10">
+          <p className="font-sans font-bold text-accent-gold text-sm sm:text-base tracking-[4px] leading-6 uppercase">
             CAMPUS CULTURE
-          </h2>
-          <p className="[font-family:'Inter',Helvetica] font-normal text-[#44474d] text-sm sm:text-base tracking-[0] leading-6">
-            More than just academics, it&#39;s a creative tribe.
           </p>
+          <h2 className="font-display font-black text-white text-3xl sm:text-4xl lg:text-7xl tracking-tighter leading-tight">
+            A Creative <span className="text-accent-gold font-serif italic font-normal">Tribe</span>
+          </h2>
+          <div className="w-24 h-1 bg-accent-gold mt-4" />
         </div>
 
         {/* Grid layout */}
@@ -42,7 +43,7 @@ export const CampusLifeExperienceSection = (): JSX.Element => {
                 className="absolute inset-0 w-full h-full bg-cover bg-center"
                 style={{ backgroundImage: "url(/DSC00988.jpg.jpeg)" }}
               />
-              <div className="absolute inset-0 bg-[linear-gradient(0deg,rgba(26,43,72,0.8)_0%,rgba(26,43,72,0)_50%)]" />
+              <div className="absolute inset-0 bg-[linear-gradient(0deg,#0D244B_0%,rgba(13,36,75,0)_50%)]" />
               <div className="flex flex-col items-start gap-2 p-6 sm:p-8 absolute left-0 bottom-0">
                 <span className="[font-family:'Inter',Helvetica] font-normal text-[#fd8b00] text-sm tracking-[2.80px] leading-5 whitespace-nowrap">
                   STUDENT EXPERIENCES

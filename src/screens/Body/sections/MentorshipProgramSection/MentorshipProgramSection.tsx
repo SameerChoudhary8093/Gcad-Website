@@ -18,19 +18,20 @@ export const MentorshipProgramSection = (): JSX.Element => {
   return (
     <section className="relative flex flex-col w-full items-center px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24 bg-white overflow-hidden">
       {/* Background Decor */}
-      <div className="absolute top-10 left-10 w-24 h-48 bg-[#fd8b00] rounded-r-full pointer-events-none opacity-20" />
-      <div className="absolute bottom-10 right-10 w-32 h-32 border-[20px] border-[#008f7a] rounded-full pointer-events-none opacity-20" />
+      <div className="absolute top-10 left-10 w-24 h-48 bg-accent-gold/10 rounded-r-full pointer-events-none" />
+      <div className="absolute bottom-10 right-10 w-32 h-32 border-[20px] border-[#0D244B]/5 rounded-full pointer-events-none" />
 
       <div className="relative z-10 flex flex-col max-w-screen-xl items-center gap-4 w-full">
 
         <ScrollReveal direction="down">
-          <h2 className="[font-family:'Plus_Jakarta_Sans',Helvetica] font-extrabold text-[#1a2b48] text-3xl sm:text-4xl text-center tracking-[0] leading-10">
-            GUIDED BY MASTERS
+          <h2 className="font-display font-black text-[#0D244B] text-3xl sm:text-4xl lg:text-6xl text-center tracking-tight leading-tight">
+            GUIDED BY <span className="text-accent-gold font-serif italic font-normal">Masters</span>
           </h2>
+          <div className="w-24 h-1 bg-accent-gold mx-auto mt-4" />
         </ScrollReveal>
 
         <ScrollReveal direction="up" delay={200}>
-          <p className="[font-family:'Inter',Helvetica] font-normal text-[#44474d] text-sm sm:text-base text-center leading-6 max-w-2xl">
+          <p className="font-sans font-medium text-gray-500 text-sm sm:text-lg text-center leading-relaxed max-w-3xl mt-4">
             Learn from industry veterans and award-winning artists who bring real-world wisdom to the classroom.
           </p>
         </ScrollReveal>

@@ -30,7 +30,7 @@ export const HeroBannerSection = (): JSX.Element => {
   const [selectedCourse, setSelectedCourse] = useState<string>("");
 
   return (
-    <section className="relative w-full flex items-center justify-center min-h-[560px] py-16 overflow-hidden">
+    <section id="hero-section" className="relative w-full flex items-center justify-center min-h-[560px] py-16 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 w-full h-full">
         <img
@@ -39,7 +39,7 @@ export const HeroBannerSection = (): JSX.Element => {
           className="w-full h-full object-cover"
           loading="eager"
         />
-        <div className="absolute inset-0 bg-[#0B1E40]/70 lg:bg-[#0B1E40]/60 backdrop-blur-[2px]" />
+        <div className="absolute inset-0 bg-[#0D244B]/70 lg:bg-[#0D244B]/65 backdrop-blur-[1px]" />
       </div>
 
       {/* Content */}
@@ -49,17 +49,20 @@ export const HeroBannerSection = (): JSX.Element => {
           {/* Left: Hero text */}
           <div className="flex flex-col items-start gap-5 w-full lg:col-span-8 lg:pl-0 pl-4">
             <ScrollReveal direction="up" delay={200}>
-              <p className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight whitespace-nowrap">
-                <span className="text-white font-sans">We Give </span>
-                <span className="text-accent-gold font-serif">Wings </span>
-                <span className="text-white font-sans">to </span>
-                <span className="text-accent-gold font-serif">your Dreams!</span>
+              <p className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight">
+                <span className="text-white font-sans tracking-tight">We Give </span>
+                <span className="text-accent-gold font-serif italic">Wings </span>
+                <span className="text-white font-sans tracking-tight">to </span>
+                <br />
+                <span className="text-white font-sans tracking-tight">your </span>
+                <span className="text-accent-gold font-serif italic">Dreams!</span>
               </p>
             </ScrollReveal>
 
             <ScrollReveal direction="left" delay={400}>
-              <h1 className="font-display font-black text-white text-5xl sm:text-6xl lg:text-7xl tracking-tighter leading-[1.1] w-full">
-                Gyan Vihar Center of <span className="text-accent-gold">Art & Design</span>
+              <h1 className="font-display font-black text-white text-4xl sm:text-6xl lg:text-8xl tracking-tighter leading-[1.0] w-full">
+                Gyan Vihar Center of <br className="hidden sm:block" />
+                <span className="text-accent-gold underline decoration-white/20 underline-offset-8">Art & Design</span>
               </h1>
             </ScrollReveal>
 
@@ -70,24 +73,30 @@ export const HeroBannerSection = (): JSX.Element => {
             </ScrollReveal>
 
             <ScrollReveal direction="up" delay={800}>
-              <div className="flex items-center gap-4 pt-4 justify-start">
-                <img
-                  className="flex-shrink-0 h-10 sm:h-12 w-auto object-contain bg-white/10 p-2 rounded-lg backdrop-blur-sm"
-                  alt="GCAD Logo"
-                  src="gcad-logo.png"
-                />
-                <div className="w-[1px] h-8 bg-white/20"></div>
-                <img
-                  className="flex-shrink-0 h-8 sm:h-10 w-auto object-contain bg-white/10 p-2 rounded-lg backdrop-blur-sm"
-                  alt="SGVU Logo"
-                  src="SGVU.png"
-                />
-                <div className="w-[1px] h-8 bg-white/20"></div>
-                <img
-                  className="flex-shrink-0 h-10 sm:h-12 w-auto object-contain bg-white/10 p-2 rounded-lg backdrop-blur-sm"
-                  alt="NAAC & NIRF"
-                  src="naac-nirf.png"
-                />
+              <div className="flex items-center gap-4 sm:gap-6 pt-6 justify-start">
+                <div className="bg-white p-3 rounded-xl shadow-[0px_10px_30px_rgba(0,0,0,0.2)] hover:scale-105 transition-transform">
+                  <img
+                    className="flex-shrink-0 h-10 sm:h-14 w-auto object-contain"
+                    alt="GCAD Logo"
+                    src="gcad-logo.png"
+                  />
+                </div>
+                <div className="w-[1px] h-10 bg-white/30 hidden sm:block"></div>
+                <div className="bg-white p-3 rounded-xl shadow-[0px_10px_30px_rgba(0,0,0,0.2)] hover:scale-105 transition-transform">
+                  <img
+                    className="flex-shrink-0 h-8 sm:h-12 w-auto object-contain"
+                    alt="SGVU Logo"
+                    src="SGVU.png"
+                  />
+                </div>
+                <div className="w-[1px] h-10 bg-white/30 hidden sm:block"></div>
+                <div className="bg-white p-3 rounded-xl shadow-[0px_10px_30px_rgba(0,0,0,0.2)] hover:scale-105 transition-transform">
+                  <img
+                    className="flex-shrink-0 h-10 sm:h-14 w-auto object-contain"
+                    alt="NAAC & NIRF"
+                    src="naac-nirf.png"
+                  />
+                </div>
               </div>
             </ScrollReveal>
           </div>
