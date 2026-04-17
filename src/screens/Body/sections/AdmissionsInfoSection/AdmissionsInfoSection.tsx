@@ -8,7 +8,7 @@ export const AdmissionsInfoSection = (): JSX.Element => {
           <div className="w-full sm:w-80 lg:w-[401px] min-h-[200px] sm:min-h-[300px] relative flex-shrink-0">
             <div
               className="absolute inset-0 bg-cover bg-center"
-              style={{ backgroundImage: "url(/Public/DSC00933.jpg.jpeg)" }}
+              style={{ backgroundImage: "url(/public/DSC00933.jpg.jpeg)" }}
             />
           </div>
 

@@ -4,7 +4,7 @@ import { ScrollReveal } from "../../../../components/ScrollReveal";
 
 const programmes = [
   {
-    image: "/Public/DSC00937.jpg.jpeg",
+    image: "/public/DSC00937.jpg.jpeg",
     title: "Bachelor of Design\n(Hons.)",
     specializations: [
       "Fashion & Lifestyle Accessories Design",
@@ -14,7 +14,7 @@ const programmes = [
     label: "4 YEAR INTEGRATED",
   },
   {
-    image: "/Public/DSC00941.jpg.jpeg",
+    image: "/public/DSC00941.jpg.jpeg",
     title: "Diploma / B.Voc",
     specializations: [
       "Advance Diploma in Design",
@@ -24,7 +24,7 @@ const programmes = [
     label: "SKILL-FOCUSED CERTIFICATES",
   },
   {
-    image: "/Public/DSC00951.jpg.jpeg",
+    image: "/public/DSC00951.jpg.jpeg",
     title: "Master of Design",
     specializations: [
       "Communication Design Specialist",
