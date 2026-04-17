@@ -40,9 +40,9 @@ export const FooterLinksSection = (): JSX.Element => {
             {/* Brand Section */}
             <div className="lg:col-span-1">
               <div className="flex items-center gap-3 mb-6">
-                <img src="/public/gcad logo.png" alt="GCAD Logo" className="h-12 w-auto" />
+                <img src="/gcad logo.png" alt="GCAD Logo" className="h-12 w-auto" />
                 <div className="w-[1px] h-8 bg-gray-600"></div>
-                <img src="/public/SGVU.png" alt="SGVU Logo" className="h-10 w-auto" />
+                <img src="/SGVU.png" alt="SGVU Logo" className="h-10 w-auto" />
               </div>
               <p className="text-gray-400 text-sm leading-6 mb-6">
                 Suresh Gyan Vihar University's flagship Centre of Art & Design. 

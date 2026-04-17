@@ -4,12 +4,12 @@ const partnerCards = [
   {
     icon: "🎓",
     title: "Skill & Academic Partners",
-    image: "/public/DSC00988.jpg.jpeg",
+    image: "/DSC00988.jpg.jpeg",
   },
   {
     icon: "🌍",
     title: "International Collaborations", 
-    image: "/public/DSC00967.jpg.jpeg",
+    image: "/DSC00967.jpg.jpeg",
   },
 ];
 

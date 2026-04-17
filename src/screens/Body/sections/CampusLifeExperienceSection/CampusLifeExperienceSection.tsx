@@ -6,14 +6,14 @@ const sideCards = [
     title: "Creative Studios",
     label: "STUDIOS",
     description: "State-of-the-art design studios equipped with latest technology and tools",
-    image: "/public/DSC01034.jpg.jpeg",
+    image: "/DSC01034.jpg.jpeg",
   },
   {
     id: "workshops",
     title: "Workshop Spaces",
     label: "WORKSHOPS", 
     description: "Hands-on workshop areas for practical learning and experimentation",
-    image: "/public/DSC00937.jpg.jpeg",
+    image: "/DSC00937.jpg.jpeg",
   },
 ];
 
@@ -40,7 +40,7 @@ export const CampusLifeExperienceSection = (): JSX.Element => {
             <CardContent className="p-0 w-full h-full relative">
               <div
                 className="absolute inset-0 w-full h-full bg-cover bg-center"
-                style={{ backgroundImage: "url(/public/DSC00988.jpg.jpeg)" }}
+                style={{ backgroundImage: "url(/DSC00988.jpg.jpeg)" }}
               />
               <div className="absolute inset-0 bg-[linear-gradient(0deg,rgba(26,43,72,0.8)_0%,rgba(26,43,72,0)_50%)]" />
               <div className="flex flex-col items-start gap-2 p-6 sm:p-8 absolute left-0 bottom-0">

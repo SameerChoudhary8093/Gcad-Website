@@ -5,8 +5,8 @@ import { defineConfig } from "vite";
 // https://vite.dev/config/
 export default defineConfig(({ mode }) => ({
   plugins: [react()],
-  publicDir: "./static",
-  base: "./",
+  publicDir: "public",
+  base: "/",
   css: {
     postcss: {
       plugins: [tailwind()],

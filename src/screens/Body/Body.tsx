@@ -38,9 +38,9 @@ export const Body = (): JSX.Element => {
 
           {/* Logo */}
           <div className="flex items-center gap-2 sm:gap-4 flex-shrink-0">
-            <img src="/public/gcad logo.png" alt="GCAD Logo" className="h-10 sm:h-12 w-auto object-contain" />
+            <img src="/gcad logo.png" alt="GCAD Logo" className="h-10 sm:h-12 w-auto object-contain" />
             <div className="w-[1px] h-8 bg-gray-300 hidden sm:block"></div>
-            <img src="/public/SGVU.png" alt="SGVU Logo" className="h-8 sm:h-10 w-auto object-contain hidden sm:block" />
+            <img src="/SGVU.png" alt="SGVU Logo" className="h-8 sm:h-10 w-auto object-contain hidden sm:block" />
           </div>
 
           {/* Desktop nav links - Centered */}
