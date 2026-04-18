@@ -13,11 +13,11 @@ const graduateCompanies = [
 
 const hiringPartners = [
   { name: "TCS", logo: "https://upload.wikimedia.org/wikipedia/commons/b/b1/Tata_Consultancy_Services_Logo.svg" },
-  { name: "Infosys", logo: "https://upload.wikimedia.org/wikipedia/commons/9/95/Infosys_logo.svg" },
-  { name: "Wipro", logo: "https://upload.wikimedia.org/wikipedia/commons/a/a0/Wipro_Primary_Logo_Color_RGB.svg" },
+  { name: "Adobe", logo: "https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Experience_Cloud_logo.svg" },
   { name: "HCL", logo: "https://upload.wikimedia.org/wikipedia/commons/8/84/HCL_Technologies_logo.svg" },
+  { name: "Deloitte", logo: "https://upload.wikimedia.org/wikipedia/commons/5/56/Deloitte.svg" },
   { name: "Accenture", logo: "https://upload.wikimedia.org/wikipedia/commons/c/cd/Accenture.svg" },
-  { name: "Deloitte", logo: "https://upload.wikimedia.org/wikipedia/commons/5/56/Deloitte.svg" }
+  { name: "Wipro", logo: "https://upload.wikimedia.org/wikipedia/commons/a/a0/Wipro_Primary_Logo_Color_RGB.svg" }
 ];
 
 export const IndustryPartnersSection = (): JSX.Element => {

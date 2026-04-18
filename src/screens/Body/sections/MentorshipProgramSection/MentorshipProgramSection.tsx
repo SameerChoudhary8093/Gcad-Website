@@ -6,12 +6,13 @@ import {
 import { ScrollReveal } from "../../../../components/ScrollReveal";
 
 const mentors = [
-  { name: "Meenakshi Singh", role: "FASHION MENTOR",   image: "https://c.animaapp.com/mnyx7rno5LIHte/img/ab6axududlfony1h0k9-inixfqhmqlmowfgudbdjqploa57ijwosqwadjwioktkl.png" },
-  { name: "Padma Raj Kesri", role: "TEXTILE EXPERT",   image: "https://c.animaapp.com/mnyx7rno5LIHte/img/ab6axuaxnga479iqogaon--znmo9na9jrgw-s-kwn7qqjmj6rtpeogs6l79qj-qu.png" },
-  { name: "Ananya Sharma",   role: "UX EVANGELIST",    image: "https://c.animaapp.com/mnyx7rno5LIHte/img/ab6axua2empbqe0q7ypyg6tiljer3vldcfuhtf0rdesfx9s4dcyyyk-ga4z5f8eo.png" },
-  { name: "Vikram Goel",     role: "INDUSTRIAL LEAD",  image: "https://c.animaapp.com/mnyx7rno5LIHte/img/ab6axub3fcmb-08zyvfvk2ljtvzmkikrqyt2ckyu2y-ouqxvgk98kdaycgong7rj.png" },
-  { name: "Sania Mirza",     role: "RESEARCH HEAD",    image: "https://c.animaapp.com/mnyx7rno5LIHte/img/ab6axudapeksro4g-t0--gisynsrauipkb7osipta2yq-fov5hiaehuqd50wjz3t.png" },
-  { name: "Rajiv Verma",     role: "DEAN OF DESIGN",   image: "https://c.animaapp.com/mnyx7rno5LIHte/img/ab6axucah3c6crfxqertwvkkzgcvdvaq7yrafz6oerjz3-c6ypvaofthiykxbcpm.png" },
+  { name: "DR. NEHA KAPOOR", role: "FASHION DESIGN", image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&h=250&auto=format&fit=crop" },
+  { name: "DR. SURAJ K SINGH", role: "TEXTILE TECHNOLOGY", image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=200&h=250&auto=format&fit=crop" },
+  { name: "DR. ANKUR JAIN", role: "VISUAL COMMUNICATION", image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=200&h=250&auto=format&fit=crop" },
+  { name: "DR. SARMAD MOIN", role: "INTERIOR DESIGN", image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=200&h=250&auto=format&fit=crop" },
+  { name: "DR. KISHAN KUMAR", role: "INDUSTRIAL DESIGN", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&h=250&auto=format&fit=crop" },
+  { name: "DR. GAURAV SHARMA", role: "ANIMATION LEAD", image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&h=250&auto=format&fit=crop" },
+  { name: "KRITI SHRIVASTAV", role: "CRAFT & TEXTILES", image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=200&h=250&auto=format&fit=crop" },
 ];
 
 export const MentorshipProgramSection = (): JSX.Element => {
@@ -36,34 +37,26 @@ export const MentorshipProgramSection = (): JSX.Element => {
           </p>
         </ScrollReveal>
 
-        {/* Mentor grid: 2 cols on mobile, 3 on tablet, 6 on desktop */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 sm:gap-8 pt-12 w-full">
+        {/* Mentor grid: 2 cols on mobile, 4 on tablet, 7 on desktop */}
+        <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-4 sm:gap-6 pt-12 w-full">
           {mentors.map((mentor, index) => (
-            <ScrollReveal key={`mentor-${index}`} direction="up" delay={index * 150} className="w-full">
-              <div className="group flex flex-col items-center p-6 bg-gray-50 rounded-2xl border border-transparent hover:border-accent-gold hover:bg-white hover:shadow-xl transition-all duration-500 w-full cursor-pointer h-full">
-                <div className="relative mb-6">
-                  <Avatar className="w-20 h-20 sm:w-24 sm:h-24 lg:w-32 lg:h-32 shadow-lg group-hover:shadow-accent-gold/20 transition-all duration-500 rounded-full flex-shrink-0">
-                    <AvatarImage src={mentor.image} alt={mentor.name} className="object-cover" />
-                    <AvatarFallback className="bg-primary-blue text-white font-bold text-lg">
-                      {mentor.name.split(" ").map((n) => n[0]).join("")}
-                    </AvatarFallback>
-                  </Avatar>
-                  <div className="absolute -bottom-2 right-1/2 translate-x-1/2 bg-accent-gold text-primary-blue text-[8px] font-black px-2 py-0.5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    PRO
-                  </div>
+            <ScrollReveal key={`mentor-${index}`} direction="up" delay={index * 100} className="w-full">
+              <div className="group flex flex-col items-center w-full cursor-pointer">
+                <div className="relative w-full aspect-[4/5] mb-4 overflow-hidden rounded-2xl sm:rounded-3xl shadow-lg transition-all duration-500 group-hover:shadow-xl group-hover:-translate-y-2 border border-gray-100">
+                  <img 
+                    src={mentor.image} 
+                    alt={mentor.name} 
+                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-110" 
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0D244B]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </div>
-                <div className="flex flex-col items-center w-full text-center flex-grow">
-                  <h3 className="font-display font-bold text-primary-blue text-sm sm:text-base leading-tight mb-1 group-hover:text-accent-gold transition-colors duration-300">
+                <div className="flex flex-col items-center w-full text-center">
+                  <h3 className="font-sans font-black text-[#0D244B] text-[10px] sm:text-xs tracking-wider leading-tight uppercase group-hover:text-accent-gold transition-colors duration-300">
                     {mentor.name}
                   </h3>
-                  <p className="font-sans font-medium text-gray-500 text-[10px] tracking-widest uppercase leading-tight">
+                  <p className="font-sans font-bold text-gray-400 text-[8px] sm:text-[9px] tracking-widest uppercase mt-1">
                     {mentor.role}
                   </p>
-                </div>
-                <div className="mt-4 pt-4 border-t border-gray-200 w-full flex justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                   <span className="text-primary-blue font-bold text-[10px] flex items-center gap-1">
-                     VIEW BIO <span className="text-accent-gold">→</span>
-                   </span>
                 </div>
               </div>
             </ScrollReveal>

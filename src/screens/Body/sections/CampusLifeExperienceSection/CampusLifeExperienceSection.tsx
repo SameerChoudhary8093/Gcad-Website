@@ -49,11 +49,10 @@ export const CampusLifeExperienceSection = (): JSX.Element => {
                   STUDENT EXPERIENCES
                 </span>
                 <h3 className="[font-family:'Plus_Jakarta_Sans',Helvetica] font-extrabold text-white text-2xl sm:text-3xl tracking-[0] leading-9 whitespace-nowrap">
-                  Events &amp; Activities
+                  Vibrant Campus Life
                 </h3>
                 <p className="max-w-lg [font-family:'Inter',Helvetica] font-normal text-[#ffffffcc] text-sm sm:text-base tracking-[0] leading-6">
-                  From the Tattva design festival to masterclasses on Design Thinking, our campus
-                  is always buzzing with creative energy.
+                  From industry visits to creative workshops, our campus is a hub of inspiration and collaboration.
                 </p>
               </div>
             </CardContent>
@@ -68,11 +67,11 @@ export const CampusLifeExperienceSection = (): JSX.Element => {
               >
                 <CardContent className="p-0 w-full relative group">
                   <div
-                    className="w-full h-40 sm:h-52 lg:h-[284px] bg-cover bg-center"
+                    className="w-full h-40 sm:h-52 lg:h-[284px] bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
                     style={{ backgroundImage: `url(${card.image})` }}
                   />
-                  <div className="flex w-full h-full items-center justify-center absolute top-0 left-0 bg-[#1a2b4866] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <span className="[font-family:'Plus_Jakarta_Sans',Helvetica] font-normal text-white text-base sm:text-xl tracking-[2.00px] leading-7 whitespace-nowrap">
+                  <div className="flex w-full h-full items-center justify-center absolute top-0 left-0 bg-[#0D244B]/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span className="[font-family:'Plus_Jakarta_Sans',Helvetica] font-bold text-white text-base sm:text-lg tracking-[4px] uppercase">
                       {card.label}
                     </span>
                   </div>
@@ -80,7 +79,19 @@ export const CampusLifeExperienceSection = (): JSX.Element => {
               </Card>
             ))}
           </div>
+        </div>
 
+        {/* Additional Image Grid (from Visual Narratives) */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 w-full mt-4 sm:mt-8">
+          {["DSC00882.jpg.jpeg", "DSC00919.jpg.jpeg", "DSC00933.jpg.jpeg", "DSC00951.jpg.jpeg"].map((img, i) => (
+            <div key={i} className="aspect-square rounded-xl overflow-hidden shadow-lg border-2 border-white/5 group">
+              <img 
+                src={img} 
+                alt="Campus Life" 
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+              />
+            </div>
+          ))}
         </div>
       </div>
     </section>

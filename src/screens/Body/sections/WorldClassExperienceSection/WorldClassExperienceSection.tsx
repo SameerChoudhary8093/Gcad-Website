@@ -1,26 +1,25 @@
-import { Card, CardContent } from "../../../../components/ui/card";
-import { ScrollArea, ScrollBar } from "../../../../components/ui/scroll-area";
+import { ScrollReveal } from "../../../../components/ScrollReveal";
 
 const studios = [
   {
-    title: "Advanced Labs",
-    description: "Equipped with the latest technology for hands-on technical design.",
-    bgImage: "https://c.animaapp.com/mnyx7rno5LIHte/img/adbb0uj6x3knfu-4cv8i4svvo8d5cqykqpd-4g86hmhz5ycy4crkra00odz8dzac.png",
+    title: "Fashion Lab",
+    description: "Industry-standard garment construction and pattern making studio.",
+    bgImage: "DSC00941.jpg.jpeg",
   },
   {
-    title: "Creative Workshops",
-    description: "Spacious areas for prototyping, fashion design, and artistic exploration.",
-    bgImage: "https://c.animaapp.com/mnyx7rno5LIHte/img/adbb0ugqe6vafz9tezppneg1bpb34twoofjrutcr5wdjsao9zeh2f65oiq3-kiiz.png",
+    title: "iMac Design Studio",
+    description: "High-end computing lab equipped with the latest Adobe Creative Suite.",
+    bgImage: "DSC00897.jpg.jpeg",
   },
   {
-    title: "Innovation Lab",
-    description: "High-end computing and VR stations for next-gen design solutions.",
-    bgImage: "https://c.animaapp.com/mnyx7rno5LIHte/img/ab6axubzt0uxpufz5eozpukso6l6ggv-id7wmojghjzjtyzqd-r-lo3xtqp4dido.png",
+    title: "Textile Workshop",
+    description: "Creative space for material exploration and textile design.",
+    bgImage: "DSC00967.jpg.jpeg",
   },
   {
-    title: "Modern Design Studio",
-    description: "Bright, collaborative space with professional drafting stations.",
-    bgImage: "modern_design_studio.png",
+    title: "Drafting Room",
+    description: "Spacious studio for technical drawing and architectural drafting.",
+    bgImage: "DSC01034.jpg.jpeg",
   },
 ];
 
@@ -33,63 +32,41 @@ export const WorldClassExperienceSection = (): JSX.Element => {
           <p className="font-sans font-bold text-accent-gold text-sm sm:text-base tracking-[4px] leading-6 uppercase">
             THE WORKSPACE
           </p>
-          <h2 className="font-display font-black text-white text-3xl sm:text-4xl lg:text-7xl tracking-tighter leading-tight whitespace-nowrap">
+          <h2 className="font-display font-black text-white text-3xl sm:text-5xl lg:text-7xl tracking-tighter leading-tight">
             WORLD-CLASS <span className="text-accent-gold font-serif italic font-normal">Studios</span>
           </h2>
-          <div className="w-24 h-1 bg-accent-gold mt-4" />
         </div>
       </div>
 
-      {/* Studio cards with marquee */}
-      <div className="w-full relative">
-        <div className="flex w-full overflow-hidden">
-          <div className="flex gap-6 sm:gap-8 py-6 animate-marquee whitespace-nowrap hover:[animation-play-state:paused]">
-            {[...studios, ...studios].map((studio, index) => (
-              <Card
-                key={index}
-                className="relative min-w-[300px] sm:min-w-[360px] lg:min-w-[400px] h-[420px] sm:h-[500px] rounded-2xl overflow-hidden shadow-[0px_10px_40px_-10px_#0000001a] border-0 flex-shrink-0 group cursor-pointer"
-              >
-                <CardContent className="p-0 h-full w-full relative">
-                  <div
-                    className="absolute inset-0 w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
-                    style={{ backgroundImage: `url(${studio.bgImage})` }}
-                  />
-                  <div
-                    className="absolute inset-0 w-full h-full opacity-80 transition-opacity duration-300 group-hover:opacity-90"
-                    style={{ background: "linear-gradient(0deg, #0D244B 0%, rgba(13,36,75,0) 60%)" }}
-                  />
-                  <div className="absolute left-0 bottom-0 flex flex-col gap-2 p-6 sm:p-8 w-full">
-                    <h3 className="[font-family:'Plus_Jakarta_Sans',Helvetica] font-bold text-white text-xl sm:text-2xl leading-8 group-hover:text-accent-gold transition-colors duration-300">
-                      {studio.title}
-                    </h3>
-                    <p className="[font-family:'Inter',Helvetica] font-normal text-[#ffffffb2] text-sm sm:text-base leading-6 whitespace-normal">
-                      {studio.description}
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
+      {/* Studio Cards Grid - Vertical Pill Style */}
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 w-full max-w-screen-xl mx-auto h-[450px] sm:h-[650px]">
+        {studios.map((studio, index) => (
+          <ScrollReveal
+            key={index}
+            direction="up"
+            delay={index * 150}
+            className="relative h-full"
+          >
+            <div className={`group relative w-full h-full overflow-hidden rounded-[80px] sm:rounded-[200px] border-2 border-white/10 hover:border-accent-gold transition-all duration-700 shadow-2xl ${index % 2 === 1 ? 'mt-8 sm:mt-12' : 'mb-8 sm:mb-12'}`}>
+              <img
+                src={studio.bgImage}
+                alt={studio.title}
+                className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0D244B] via-[#0D244B]/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-500" />
+              
+              <div className="absolute inset-x-0 bottom-12 sm:bottom-20 px-4 sm:px-8 flex flex-col items-center text-center">
+                <h3 className="font-display font-bold text-white text-base sm:text-2xl mb-2 sm:mb-3 drop-shadow-md">
+                  {studio.title}
+                </h3>
+                <p className="font-sans font-normal text-white/80 text-[10px] sm:text-xs leading-relaxed max-w-[120px] sm:max-w-[180px] opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500">
+                  {studio.description}
+                </p>
+              </div>
+            </div>
+          </ScrollReveal>
+        ))}
       </div>
-
-      <style>{`
-        @keyframes marquee {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(calc(-50% - 1rem)); }
-        }
-        .animate-marquee {
-          display: flex;
-          width: max-content;
-          animation: marquee 40s linear infinite;
-        }
-        @media (min-width: 640px) {
-          @keyframes marquee {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(calc(-50% - 1.5rem)); }
-          }
-        }
-      `}</style>
     </section>
   );
 };

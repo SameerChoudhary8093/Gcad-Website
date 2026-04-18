@@ -24,12 +24,10 @@ export const CourseraPartnershipSection = (): JSX.Element => {
                 <span className="font-display font-black text-white text-xl">Join</span>
               </div>
               
-              <h2 className="font-display font-black text-3xl sm:text-4xl lg:text-6xl leading-tight mb-8">
-                <span className="text-[#0D244B] bg-white px-3 py-1 inline-block rounded-sm transform -rotate-1">Suresh Gyan Vihar University &</span>
-                <br />
-                <span className="text-[#0D244B] bg-accent-gold px-3 py-1 inline-block mt-2 rounded-sm transform rotate-1">Get Free Access to</span>
+              <h2 className="font-display font-black text-3xl sm:text-4xl lg:text-5xl leading-tight mb-8">
+                <span className="text-[#0D244B] bg-white px-3 py-1 inline-block rounded-sm transform -rotate-1">Suresh Gyan Vihar University & Get Free Access to</span>
                 <img 
-                  src="https://upload.wikimedia.org/wikipedia/commons/9/97/Coursera-logo_small.svg" 
+                  src="coursera-logo.png" 
                   alt="Coursera" 
                   className="inline-block h-8 sm:h-12 ml-4 align-middle"
                 />

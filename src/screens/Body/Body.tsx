@@ -2,21 +2,19 @@ import { useState } from "react";
 import { Button } from "../../components/ui/button";
 import { TopNavbar } from "../../components/TopNavbar";
 import { AcademicProgrammesSection } from "./sections/AcademicProgrammesSection";
-import { AdmissionsCallToActionSection } from "./sections/AdmissionsCallToActionSection";
-import { AdmissionsInfoSection } from "./sections/AdmissionsInfoSection";
-import { CampusLifeExperienceSection } from "./sections/CampusLifeExperienceSection";
-import { CentreOfArtDesignSection } from "./sections/CentreOfArtDesignSection";
-import { FooterLinksSection } from "./sections/FooterLinksSection";
+import { AdmissionsCallToActionSection } from "./sections/AdmissionsCallToActionSection/AdmissionsCallToActionSection";
+import { CampusLifeExperienceSection } from "./sections/CampusLifeExperienceSection/CampusLifeExperienceSection";
+import { FooterLinksSection } from "./sections/FooterLinksSection/FooterLinksSection";
 import { HeroBannerSection } from "./sections/HeroBannerSection";
 import { IndustryPartnersSection } from "./sections/IndustryPartnersSection/IndustryPartnersSection";
 import { MentorshipProgramSection } from "./sections/MentorshipProgramSection/MentorshipProgramSection";
 import { WhyChooseGucedSection } from "./sections/WhyChooseGucedSection/WhyChooseGucedSection";
-import { WorldClassExperienceSection } from "./sections/WorldClassExperienceSection";
+import { WorldClassExperienceSection } from "./sections/WorldClassExperienceSection/WorldClassExperienceSection";
 import { FAQsSection } from "./sections/FAQsSection/FAQsSection";
-import { GallerySection } from "./sections/GallerySection/GallerySection";
-import { AchievementsSection } from "./sections/AchievementsSection/AchievementsSection";
 import { CourseraPartnershipSection } from "./sections/CourseraPartnershipSection";
 import { AdobePartnershipSection } from "./sections/AdobePartnershipSection";
+import { EventsSection } from "./sections/EventsSection";
+import { ApprovalSection } from "./sections/ApprovalSection";
 
 export const Body = (): JSX.Element => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -133,20 +131,22 @@ export const Body = (): JSX.Element => {
         )}
       </nav>
 
-      {/* ── Page Sections ── */}
-      <main className="flex flex-col w-full">
-        {/* Hero Section */}
+      {/* ── Main Body Content ── */}
+      <main className="w-full">
         <HeroBannerSection />
         
         {/* Section 1: Why Choose - Blue background */}
         <div className="bg-primary-blue text-white">
           <WhyChooseGucedSection />
         </div>
-        
-        {/* Section 2: Academic Programmes - White background */}
+
+        {/* Section 2: Academic Programs - White background */}
         <div className="bg-white">
           <AcademicProgrammesSection />
         </div>
+
+        {/* Approval Section */}
+        <ApprovalSection />
 
         {/* Section 3: Coursera Partnership - Blue background */}
         <div className="bg-primary-blue text-white">
@@ -162,47 +162,38 @@ export const Body = (): JSX.Element => {
         <div className="bg-white">
           <IndustryPartnersSection />
         </div>
-        
-        {/* Section 5: World Class Experience - Blue background */}
+
+        {/* Section 6: Infrastructure - Blue background */}
         <div className="bg-primary-blue text-white">
           <WorldClassExperienceSection />
         </div>
 
-        {/* Section 6: Mentorship Program - White background */}
-        <div className="bg-white">
-          <MentorshipProgramSection />
-        </div>
-        
-        {/* Section 7: Campus Life Experience - Blue background */}
+        {/* Events Section */}
+        <EventsSection />
+
+        {/* Section 7: Campus Life - Blue background */}
         <div className="bg-primary-blue text-white">
           <CampusLifeExperienceSection />
         </div>
 
-        {/* Section 8: Gallery Section - White background */}
+        {/* Section 8: Guided by Masters - White background */}
         <div className="bg-white">
-          <GallerySection />
+          <MentorshipProgramSection />
         </div>
-        
-        {/* Section 9: Achievements Section - Blue background */}
-        <div className="bg-primary-blue text-white">
-          <AchievementsSection />
-        </div>
-        
-        {/* Section 10: FAQs Section - White background */}
+
+        {/* Section 9: Admissions FAQ - White background */}
         <div className="bg-white">
           <FAQsSection />
         </div>
 
-        {/* Section 11: Admissions Call to Action - Blue background */}
+        {/* Section 11: Call to Action - Blue background */}
         <div className="bg-primary-blue text-white">
           <AdmissionsCallToActionSection />
         </div>
-        
-        {/* Footer Links Section - Navy dark background */}
-        <div className="bg-primary-blue border-t border-white/10">
-          <FooterLinksSection />
-        </div>
       </main>
+
+      {/* ── Footer ── */}
+      <FooterLinksSection />
     </div>
   );
 };
