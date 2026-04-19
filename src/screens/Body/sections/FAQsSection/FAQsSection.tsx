@@ -88,37 +88,65 @@ export const FAQsSection = (): JSX.Element => {
 
             {/* Right side: SGVU Advantage */}
             <div className="lg:col-span-5">
-              <div className="sticky top-32 p-8 sm:p-10 bg-[#0D244B] rounded-3xl shadow-2xl overflow-hidden border border-white/10 relative group">
-                {/* Decorative Elements */}
-                <div className="absolute top-0 right-0 w-32 h-32 bg-accent-gold/10 rounded-full -mr-16 -mt-16 blur-2xl group-hover:bg-accent-gold/20 transition-all duration-700" />
-                <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/5 rounded-full -ml-12 -mb-12 blur-xl" />
+              <div className="sticky top-32 flex flex-col gap-6">
                 
-                <div className="relative z-10">
-                  <p className="font-sans font-bold text-accent-gold text-xs sm:text-sm tracking-[4px] leading-6 uppercase mb-4">
-                    The Sgvu Advantage
-                  </p>
-                  <h3 className="font-display font-black text-white text-3xl sm:text-4xl lg:text-5xl tracking-tighter leading-tight mb-8">
-                    Apple-Authorized <span className="text-accent-gold font-serif italic font-normal">Training</span>
-                  </h3>
+                {/* Apple Lab Card */}
+                <div className="p-8 sm:p-10 bg-[#0D244B] rounded-3xl shadow-2xl overflow-hidden border border-white/10 relative group">
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-accent-gold/10 rounded-full -mr-16 -mt-16 blur-2xl group-hover:bg-accent-gold/20 transition-all duration-700" />
                   
-                  <div className="flex flex-col gap-8">
-                    <p className="font-sans font-medium text-gray-400 text-base sm:text-lg leading-relaxed">
-                      Unleash your creative side with latest configuration <span className="text-white">Apple workstations</span> with <span className="text-white">Adobe Suite</span> for all your design needs.
-                    </p>
-                    
-                    <div className="flex items-center gap-6">
-                      <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple" className="h-10 brightness-0 invert opacity-50" />
-                      <div className="w-px h-8 bg-white/10" />
-                      <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Experience_Cloud_logo.svg" alt="Adobe" className="h-10 brightness-0 invert opacity-50" />
+                  <div className="relative z-10">
+                    <div className="flex justify-between items-start mb-4">
+                      <p className="font-sans font-bold text-accent-gold text-xs sm:text-sm tracking-[4px] leading-6 uppercase">
+                        The Sgvu Advantage
+                      </p>
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple" className="h-6 brightness-0 invert" />
                     </div>
-
-                    <div className="mt-4 pt-8 border-t border-white/5">
-                      <button className="w-full py-4 bg-accent-gold text-[#0D244B] font-sans font-black text-sm tracking-widest rounded-xl hover:bg-white transition-all duration-300 uppercase shadow-lg shadow-accent-gold/10">
-                        Explore Infrastructure
-                      </button>
+                    
+                    <h3 className="font-display font-black text-white text-3xl sm:text-4xl tracking-tighter leading-tight mb-6">
+                      Apple-Authorized <span className="text-accent-gold font-serif italic font-normal">Training</span>
+                    </h3>
+                    
+                    <div className="flex flex-col gap-6">
+                      <p className="font-sans font-medium text-gray-400 text-base leading-relaxed">
+                        Unleash your creative side with latest configuration <span className="text-white">Apple workstations</span> with Adobe Suite.
+                      </p>
+                      
+                      <div className="rounded-2xl overflow-hidden h-32 bg-white/5 border border-white/10 relative">
+                        <img src="DSC00897.jpg.jpeg" alt="Apple Lab" className="w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700" />
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <span className="text-[10px] font-black tracking-widest text-white uppercase bg-[#0D244B]/80 px-4 py-1.5 rounded-full border border-white/20">Authorized Centre</span>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
+
+                {/* Google Lab Card */}
+                <div className="p-8 sm:p-10 bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 relative group">
+                  <div className="relative z-10">
+                    <div className="flex justify-between items-start mb-4">
+                      <p className="font-sans font-bold text-accent-gold text-xs sm:text-sm tracking-[4px] leading-6 uppercase">
+                        Digital Innovation
+                      </p>
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" className="h-5" />
+                    </div>
+                    
+                    <h3 className="font-display font-black text-[#0D244B] text-3xl sm:text-4xl tracking-tighter leading-tight mb-6">
+                      Google Chrome <span className="text-accent-gold font-serif italic font-normal">Lab</span>
+                    </h3>
+                    
+                    <div className="flex flex-col gap-6">
+                      <p className="font-sans font-medium text-gray-500 text-base leading-relaxed">
+                        Access cloud-first <span className="text-[#0D244B] font-bold">Innovation Workspace</span> designed for modern digital workflows.
+                      </p>
+                      
+                      <div className="rounded-2xl overflow-hidden h-32 bg-gray-50 border border-gray-100 relative">
+                        <img src="DSC01034.jpg.jpeg" alt="Google Lab" className="w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
               </div>
             </div>
 

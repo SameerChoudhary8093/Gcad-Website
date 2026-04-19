@@ -16,6 +16,11 @@ import { AdobePartnershipSection } from "./sections/AdobePartnershipSection";
 import { EventsSection } from "./sections/EventsSection";
 import { ApprovalSection } from "./sections/ApprovalSection";
 
+import { TheGcadDifferenceSection } from "./sections/TheGcadDifferenceSection";
+import { CareerProspectsSection } from "./sections/CareerProspectsSection";
+import { InfrastructureDetailsSection } from "./sections/InfrastructureDetailsSection";
+import { EligibilitySection } from "./sections/EligibilitySection";
+
 export const Body = (): JSX.Element => {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -135,6 +140,9 @@ export const Body = (): JSX.Element => {
       <main className="w-full">
         <HeroBannerSection />
         
+        {/* The GCAD Difference (NEW) */}
+        <TheGcadDifferenceSection />
+
         {/* Section 1: Why Choose - Blue background */}
         <div className="bg-primary-blue text-white">
           <WhyChooseGucedSection />
@@ -144,6 +152,9 @@ export const Body = (): JSX.Element => {
         <div className="bg-white">
           <AcademicProgrammesSection />
         </div>
+
+        {/* Career Prospects (NEW) */}
+        <CareerProspectsSection />
 
         {/* Approval Section */}
         <ApprovalSection />
@@ -159,7 +170,7 @@ export const Body = (): JSX.Element => {
         </div>
 
         {/* Section 5: Industry Partners - White background */}
-        <div className="bg-white">
+        <div className="bg-white" id="placements">
           <IndustryPartnersSection />
         </div>
 
@@ -167,6 +178,9 @@ export const Body = (): JSX.Element => {
         <div className="bg-primary-blue text-white">
           <WorldClassExperienceSection />
         </div>
+
+        {/* Infrastructure Details (NEW) */}
+        <InfrastructureDetailsSection />
 
         {/* Events Section */}
         <EventsSection />
@@ -180,6 +194,9 @@ export const Body = (): JSX.Element => {
         <div className="bg-white">
           <MentorshipProgramSection />
         </div>
+
+        {/* Eligibility Section (NEW) - Commented out for now as requested */}
+        {/* <EligibilitySection /> */}
 
         {/* Section 9: Admissions FAQ - White background */}
         <div className="bg-white">

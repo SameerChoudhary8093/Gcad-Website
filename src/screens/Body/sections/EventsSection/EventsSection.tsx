@@ -42,14 +42,14 @@ export const EventsSection = (): JSX.Element => {
 
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-12">
-          
+
           {/* Left: Decorative Image Box (Optional based on image 3) */}
           <div className="hidden lg:block w-1/3">
-             <ScrollReveal direction="left">
-                <div className="relative w-full aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl border-8 border-white">
-                  <img src="DSC00951.jpg.jpeg" alt="Event Highlights" className="w-full h-full object-cover" />
-                </div>
-             </ScrollReveal>
+            <ScrollReveal direction="left">
+              <div className="relative w-full aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl border-8 border-white">
+                <img src="DSC00951.jpg.jpeg" alt="Event Highlights" className="w-full h-full object-cover" />
+              </div>
+            </ScrollReveal>
           </div>
 
           {/* Center/Right: Event List Card */}
@@ -57,7 +57,7 @@ export const EventsSection = (): JSX.Element => {
             <ScrollReveal direction="up">
               <div className="bg-white p-8 sm:p-16 rounded-[40px] shadow-[0px_30px_60px_rgba(0,0,0,0.1)] border border-white/20 relative">
                 <div className="absolute -top-6 -left-6 w-24 h-24 bg-accent-gold/20 rounded-full blur-2xl" />
-                
+
                 <h2 className="font-display font-black text-[#0D244B] text-4xl sm:text-6xl mb-12 tracking-tighter relative inline-block">
                   Events & Activities
                   <div className="absolute bottom-0 left-0 w-full h-1 bg-accent-gold/30" />
@@ -73,19 +73,17 @@ export const EventsSection = (): JSX.Element => {
                     </li>
                   ))}
                 </ul>
-                
+
                 {/* Accreditation Overlay from Image 3 */}
-                <div className="mt-16 pt-12 border-t border-gray-100 flex items-center gap-8 opacity-60">
-                   <div className="flex items-center gap-4">
-                      <img src="https://upload.wikimedia.org/wikipedia/en/a/af/National_Institutional_Ranking_Framework_logo.png" alt="NIRF" className="h-8" />
-                      <div className="w-px h-6 bg-gray-200" />
-                      <div className="flex flex-col">
-                        <span className="text-[10px] font-black tracking-widest text-[#0D244B]">SGVU</span>
-                        <span className="text-[8px] font-bold text-gray-400">JAIPUR</span>
-                      </div>
-                      <div className="w-px h-6 bg-gray-200" />
-                      <span className="text-xs font-black text-primary-blue">NAAC A+ GRADE</span>
-                   </div>
+                <div className="mt-16 pt-12 border-t border-gray-100 flex items-center gap-8 opacity-80">
+                  <div className="flex items-center gap-6">
+                    <img src="naac-nirf.png" alt="NIRF NAAC" className="h-12 w-auto object-contain" />
+                    <div className="w-px h-10 bg-gray-200" />
+                    <div className="flex flex-col">
+                      <span className="text-[12px] font-black tracking-widest text-[#0D244B]">NAAC A+ GRADE</span>
+                      <span className="text-[10px] font-bold text-gray-400">GLOBAL STANDARDS</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </ScrollReveal>
