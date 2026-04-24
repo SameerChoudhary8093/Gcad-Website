@@ -51,7 +51,22 @@ export const WhyChooseGucedSection = (): JSX.Element => {
           </ul>
 
           <ScrollReveal direction="up" delay={600}>
-            <Button className="inline-flex justify-center px-8 sm:px-10 py-4 h-auto bg-accent-gold hover:bg-light-gold rounded-lg shadow-[0px_20px_25px_-5px_#0000001a]">
+            <Button 
+              onClick={() => {
+                const element = document.getElementById("hero-section");
+                if (element) {
+                  element.scrollIntoView({ behavior: "smooth", block: "center" });
+                  const formCard = element.querySelector('[class*="Card"]');
+                  if (formCard) {
+                    formCard.classList.add("ring-4", "ring-accent-gold", "ring-opacity-75", "scale-105");
+                    setTimeout(() => {
+                      formCard.classList.remove("ring-4", "ring-accent-gold", "ring-opacity-75", "scale-105");
+                    }, 2000);
+                  }
+                }
+              }}
+              className="inline-flex justify-center px-8 sm:px-10 py-4 h-auto bg-accent-gold hover:bg-light-gold rounded-lg shadow-[0px_20px_25px_-5px_#0000001a] cursor-pointer"
+            >
               <span className="font-sans font-extrabold text-primary-blue text-sm sm:text-base tracking-[-0.40px] leading-6 whitespace-nowrap">
                 APPLY NOW!
               </span>

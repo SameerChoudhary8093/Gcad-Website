@@ -1,4 +1,3 @@
-import React from "react";
 import { ScrollReveal } from "../../../components/ScrollReveal";
 
 const labs = [
@@ -9,7 +8,7 @@ const labs = [
     image: "DSC00897.jpg.jpeg",
   },
   {
-    title: "Google Chrome Lab",
+    title: "Google",
     subtitle: "Digital Innovation workspace",
     icon: "💻",
     image: "DSC01034.jpg.jpeg",
@@ -60,12 +59,12 @@ const amenities = [
 
 export const InfrastructureDetailsSection = () => {
   return (
-    <section className="py-24 bg-[#f8f9fc] relative overflow-hidden">
+    <section id="infrastructure-details" className="py-24 bg-[#f8f9fc] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-16">
           <ScrollReveal direction="up">
             <h2 className="text-4xl sm:text-6xl font-black text-[#0d244b] tracking-tighter mb-4 uppercase">
-              World-Class <span className="text-accent-gold">Infrastructure</span>
+              World-Class <span className="text-accent-gold font-serif italic font-normal">Infrastructure</span>
             </h2>
             <p className="text-gray-500 font-bold tracking-widest uppercase">Spread across 130 acres, the GCAD campus is equipped with 40+ state-of-the-art labs and studios:</p>
           </ScrollReveal>
@@ -78,20 +77,17 @@ export const InfrastructureDetailsSection = () => {
               direction="up" 
               delay={index * 100}
             >
-              <div className="bg-white rounded-[40px] overflow-hidden flex flex-col group hover:shadow-2xl transition-all duration-500 cursor-pointer border border-gray-100 h-full">
-                <div className="h-48 relative overflow-hidden">
+              <div className="bg-primary-blue rounded-[40px] overflow-hidden flex flex-col group hover:shadow-2xl transition-all duration-500 cursor-pointer border border-white/20 h-full">
+                <div className="h-64 relative overflow-hidden">
                   <img src={lab.image} alt={lab.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-                  <div className="absolute inset-0 bg-[#0d244b]/20 group-hover:bg-transparent transition-colors" />
-                  <div className="absolute bottom-4 left-6 w-12 h-12 bg-accent-gold rounded-full flex items-center justify-center text-xl shadow-lg border-4 border-white">
-                    {lab.icon}
-                  </div>
+                  <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors" />
                 </div>
                 
-                <div className="p-8 flex flex-col flex-grow bg-white">
-                  <h3 className="text-[#0d244b] text-lg font-black uppercase mb-2 leading-tight tracking-tight group-hover:text-accent-gold transition-colors">
+                <div className="p-8 flex flex-col flex-grow bg-primary-blue">
+                  <h3 className="text-white text-lg font-black uppercase mb-2 leading-tight tracking-tight group-hover:text-accent-gold transition-colors">
                     {lab.title}
                   </h3>
-                  <p className="text-gray-500 text-sm font-medium">
+                  <p className="text-white/80 text-sm font-medium">
                     {lab.subtitle}
                   </p>
                 </div>
@@ -118,7 +114,7 @@ export const InfrastructureDetailsSection = () => {
                   {amenities.map((amenity, idx) => (
                     <span 
                       key={idx} 
-                      className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-full text-white font-bold text-sm transition-all cursor-default"
+                      className="px-6 py-3 bg-accent-gold hover:bg-white text-[#0d244b] hover:text-white border border-white/20 rounded-full font-bold text-sm transition-all cursor-pointer"
                     >
                       {amenity}
                     </span>

@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Button } from "../../components/ui/button";
 import { TopNavbar } from "../../components/TopNavbar";
 import { AcademicProgrammesSection } from "./sections/AcademicProgrammesSection";
 import { AdmissionsCallToActionSection } from "./sections/AdmissionsCallToActionSection/AdmissionsCallToActionSection";
@@ -19,7 +18,6 @@ import { ApprovalSection } from "./sections/ApprovalSection";
 import { TheGcadDifferenceSection } from "./sections/TheGcadDifferenceSection";
 import { CareerProspectsSection } from "./sections/CareerProspectsSection";
 import { InfrastructureDetailsSection } from "./sections/InfrastructureDetailsSection";
-import { EligibilitySection } from "./sections/EligibilitySection";
 
 export const Body = (): JSX.Element => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -27,14 +25,25 @@ export const Body = (): JSX.Element => {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      element.scrollIntoView({ behavior: "smooth", block: "center" });
+      
+      // Add highlight effect for form
+      if (id === "hero-section") {
+        const formCard = element.querySelector('[class*="Card"]');
+        if (formCard) {
+          formCard.classList.add("ring-4", "ring-accent-gold", "ring-opacity-75", "scale-105");
+          setTimeout(() => {
+            formCard.classList.remove("ring-4", "ring-accent-gold", "ring-opacity-75", "scale-105");
+          }, 2000);
+        }
+      }
     }
   };
 
   const navLinks = [
     { label: "About", id: "why-choose" },
     { label: "Programs", id: "programs" },
-    { label: "Infrastructure", id: "infrastructure" },
+    { label: "Infrastructure", id: "infrastructure-details" },
     { label: "Placements", id: "placements" },
     { label: "Admissions", id: "hero-section" },
   ];

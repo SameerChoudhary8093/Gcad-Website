@@ -1,19 +1,10 @@
 import { ScrollReveal } from "../../../../components/ScrollReveal";
 
 const accreditations = [
-  { name: "NIRF", logo: "https://commons.wikimedia.org/wiki/Special:Redirect/file/National_Institutional_Ranking_Framework_logo.png" },
-  { name: "UGC", logo: "https://commons.wikimedia.org/wiki/Special:Redirect/file/University_Grants_Commission_logo.png" },
-  { name: "PCI", logo: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Pharmacy_Council_of_India_logo.png" },
-  { name: "AICTE", logo: "https://commons.wikimedia.org/wiki/Special:Redirect/file/All_India_Council_for_Technical_Education_logo.png" },
-  { name: "NCTE", logo: "https://commons.wikimedia.org/wiki/Special:Redirect/file/NCTE_logo.png" },
-  { name: "ICAR", logo: "https://commons.wikimedia.org/wiki/Special:Redirect/file/ICAR_Logo.svg" },
-  { name: "BCI", logo: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Bar_Council_of_India_logo.png" },
-  { name: "ISO", logo: "https://commons.wikimedia.org/wiki/Special:Redirect/file/ISO_logo_(2010).svg" },
-  { name: "AIU", logo: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Association_of_Indian_Universities_logo.png" },
-  { name: "RCI", logo: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Rehabilitation_Council_of_India_logo.png" },
-  { name: "NCC", logo: "https://commons.wikimedia.org/wiki/Special:Redirect/file/National_Cadet_Corps_(India)_logo.png" },
-  { name: "DEB", logo: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Distance_Education_Bureau_logo.png" },
-  { name: "SIRO", logo: "https://commons.wikimedia.org/wiki/Special:Redirect/file/DSIR_Logo.png" },
+  { name: "UGC", logo: "public/UGC.jpg" },
+  { name: "AICTE", logo: "public/AICTE.jpg" },
+  { name: "NIRF", logo: "public/nirf.png" },
+  { name: "BCI", logo: "public/BCI.jpg" },
 ];
 
 export const ApprovalSection = (): JSX.Element => {
@@ -21,19 +12,20 @@ export const ApprovalSection = (): JSX.Element => {
     <section className="w-full bg-white py-16 sm:py-24 overflow-hidden border-y border-gray-100">
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal direction="up">
-          <h2 className="font-display font-black text-[#0D244B] text-3xl sm:text-4xl text-center mb-16 sm:mb-24">
-            Approval & Accreditations
+          <h2 className="font-display font-black text-primary-blue text-3xl sm:text-4xl text-center mb-16 sm:mb-24">
+            Approval & <span className="text-accent-gold font-serif italic font-normal">Accreditations</span>
           </h2>
         </ScrollReveal>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-y-12 sm:gap-y-20 gap-x-8">
-          {accreditations.map((item, index) => (
-            <ScrollReveal 
-              key={index} 
-              direction="up" 
-              delay={index * 50}
-              className="flex flex-col items-center justify-center relative group"
-            >
+        <div className="flex flex-col items-center gap-12 sm:gap-16">
+          <div className="flex flex-wrap justify-center gap-8 sm:gap-12 lg:gap-16">
+            {accreditations.map((item, index) => (
+              <ScrollReveal 
+                key={index} 
+                direction="up" 
+                delay={index * 50}
+                className="flex flex-col items-center justify-center relative group"
+              >
               {/* Laurel Wreath Mockup using CSS/SVG */}
               <div className="relative w-24 h-24 sm:w-32 sm:h-32 flex items-center justify-center">
                 <svg className="absolute inset-0 w-full h-full text-gray-300 group-hover:text-accent-gold transition-colors duration-500" viewBox="0 0 100 100">
@@ -53,6 +45,7 @@ export const ApprovalSection = (): JSX.Element => {
               </span>
             </ScrollReveal>
           ))}
+          </div>
         </div>
       </div>
     </section>

@@ -1,4 +1,3 @@
-import { Button } from "../../../../components/ui/button";
 import { Card, CardContent } from "../../../../components/ui/card";
 import { ScrollReveal } from "../../../../components/ScrollReveal";
 
@@ -106,7 +105,12 @@ export const AcademicProgrammesSection = (): JSX.Element => {
         {/* CTA */}
         <ScrollReveal direction="up" delay={600} className="w-full">
           <div className="flex flex-col items-center w-full">
-            <Button className="inline-flex gap-3 px-8 sm:px-12 py-4 sm:py-5 bg-white rounded-lg items-center h-auto shadow-[0px_20px_25px_-5px_#00000033] hover:bg-gray-100">
+            <a 
+              href="https://drive.google.com/drive/u/0/folders/1tXSX_Vqdl7PbvEK0OFob2lOaZoCDrecX" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex gap-3 px-8 sm:px-12 py-4 sm:py-5 bg-white rounded-lg items-center h-auto shadow-[0px_20px_25px_-5px_#00000033] hover:bg-gray-100 transition-all duration-300 hover:scale-105"
+            >
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="flex-shrink-0">
                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
                  <polyline points="7 10 12 15 17 10"></polyline>
@@ -115,7 +119,7 @@ export const AcademicProgrammesSection = (): JSX.Element => {
               <span className="font-sans font-extrabold text-primary-blue text-sm sm:text-base tracking-[-0.40px] leading-6 whitespace-nowrap">
                 DOWNLOAD BROCHURE
               </span>
-            </Button>
+            </a>
           </div>
         </ScrollReveal>
 

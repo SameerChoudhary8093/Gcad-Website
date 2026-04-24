@@ -6,7 +6,7 @@ export const TopNavbar = (): JSX.Element => {
         <div className="flex items-center gap-2.5">
           <img className="w-[18px] h-[18px]" alt="Phone" src="https://c.animaapp.com/mn0n10j9vDypoz/img/container-6.svg" />
           <a href="tel:+8306694440" className="[font-family:'Lato',Helvetica] font-normal text-white text-[11px] tracking-[0] leading-[16.5px] whitespace-nowrap hover:underline">
-            +83066 94440
+            +8306694440
           </a>
         </div>
         <div className="flex items-center gap-2">

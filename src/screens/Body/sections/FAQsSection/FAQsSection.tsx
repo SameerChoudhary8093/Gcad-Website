@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ChevronDown, ChevronUp } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 
 const faqs = [
   {
@@ -65,7 +65,7 @@ export const FAQsSection = (): JSX.Element => {
                   >
                     <button
                       onClick={() => toggleFAQ(index)}
-                      className="w-full py-4 text-left flex items-center justify-between bg-white hover:bg-gray-50/50 transition-all duration-300 rounded-xl px-4"
+                      className="w-full py-4 text-left flex items-center justify-between bg-blue-50 hover:bg-blue-100 transition-all duration-300 rounded-xl px-4"
                     >
                       <span className={`font-sans font-bold text-base sm:text-lg transition-colors duration-300 ${openIndex === index ? 'text-accent-gold' : 'text-primary-blue'}`}>
                         <span className="text-accent-gold/40 mr-3 font-serif italic">{String(index + 1).padStart(2, '0')}</span>
@@ -77,9 +77,11 @@ export const FAQsSection = (): JSX.Element => {
                     </button>
                     
                     <div className={`overflow-hidden transition-all duration-500 px-4 ${openIndex === index ? 'max-h-96 opacity-100 mt-2' : 'max-h-0 opacity-0'}`}>
-                      <p className="font-sans font-medium text-gray-500 text-sm sm:text-base leading-relaxed border-l-2 border-accent-gold pl-4 py-1">
-                        {faq.answer}
-                      </p>
+                      <div className="bg-blue-50 rounded-lg p-4">
+                        <p className="font-sans font-medium text-gray-700 text-sm sm:text-base leading-relaxed border-l-2 border-accent-gold pl-4 py-1">
+                          {faq.answer}
+                        </p>
+                      </div>
                     </div>
                   </div>
                 ))}
@@ -90,58 +92,61 @@ export const FAQsSection = (): JSX.Element => {
             <div className="lg:col-span-5">
               <div className="sticky top-32 flex flex-col gap-6">
                 
-                {/* Apple Lab Card */}
-                <div className="p-8 sm:p-10 bg-[#0D244B] rounded-3xl shadow-2xl overflow-hidden border border-white/10 relative group">
+                {/* Enhanced Tech Labs Card */}
+                <div className="p-8 sm:p-10 bg-gradient-to-br from-[#0D244B] to-[#1a3a6e] rounded-3xl shadow-2xl overflow-hidden border border-white/10 relative group hover:shadow-3xl transition-all duration-500">
+                  {/* Enhanced background effects */}
                   <div className="absolute top-0 right-0 w-32 h-32 bg-accent-gold/10 rounded-full -mr-16 -mt-16 blur-2xl group-hover:bg-accent-gold/20 transition-all duration-700" />
+                  <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/5 rounded-full -ml-12 -mb-12 blur-xl group-hover:bg-white/10 transition-all duration-700" />
                   
                   <div className="relative z-10">
-                    <div className="flex justify-between items-start mb-4">
-                      <p className="font-sans font-bold text-accent-gold text-xs sm:text-sm tracking-[4px] leading-6 uppercase">
+                    <div className="flex flex-col items-center mb-6">
+                      <p className="font-sans font-bold text-accent-gold text-xs sm:text-sm tracking-[4px] leading-6 uppercase mb-2">
                         The Sgvu Advantage
                       </p>
-                      <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple" className="h-6 brightness-0 invert" />
-                    </div>
-                    
-                    <h3 className="font-display font-black text-white text-3xl sm:text-4xl tracking-tighter leading-tight mb-6">
-                      Apple-Authorized <span className="text-accent-gold font-serif italic font-normal">Training</span>
-                    </h3>
-                    
-                    <div className="flex flex-col gap-6">
-                      <p className="font-sans font-medium text-gray-400 text-base leading-relaxed">
-                        Unleash your creative side with latest configuration <span className="text-white">Apple workstations</span> with Adobe Suite.
-                      </p>
+                      <h3 className="font-display font-black text-white text-2xl sm:text-3xl tracking-tighter leading-tight text-center">
+                        Apple & Google <span className="text-accent-gold font-serif italic font-normal">Innovation Labs</span>
+                      </h3>
+                      <div className="flex items-center gap-4 mt-4">
+                        <div className="flex items-center gap-2 bg-white/10 rounded-full px-3 py-1.5">
+                          <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple" className="h-5 brightness-0 invert" />
+                          <span className="text-white text-xs font-medium">Authorized</span>
+                        </div>
+                        <div className="flex items-center gap-2 bg-white/10 rounded-full px-3 py-1.5">
+                          <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" className="h-4" />
                       
-                      <div className="rounded-2xl overflow-hidden h-32 bg-white/5 border border-white/10 relative">
-                        <img src="DSC00897.jpg.jpeg" alt="Apple Lab" className="w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700" />
-                        <div className="absolute inset-0 flex items-center justify-center">
-                          <span className="text-[10px] font-black tracking-widest text-white uppercase bg-[#0D244B]/80 px-4 py-1.5 rounded-full border border-white/20">Authorized Centre</span>
                         </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-
-                {/* Google Lab Card */}
-                <div className="p-8 sm:p-10 bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 relative group">
-                  <div className="relative z-10">
-                    <div className="flex justify-between items-start mb-4">
-                      <p className="font-sans font-bold text-accent-gold text-xs sm:text-sm tracking-[4px] leading-6 uppercase">
-                        Digital Innovation
-                      </p>
-                      <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" className="h-5" />
-                    </div>
-                    
-                    <h3 className="font-display font-black text-[#0D244B] text-3xl sm:text-4xl tracking-tighter leading-tight mb-6">
-                      Google Chrome <span className="text-accent-gold font-serif italic font-normal">Lab</span>
-                    </h3>
                     
                     <div className="flex flex-col gap-6">
-                      <p className="font-sans font-medium text-gray-500 text-base leading-relaxed">
-                        Access cloud-first <span className="text-[#0D244B] font-bold">Innovation Workspace</span> designed for modern digital workflows.
+                      <p className="font-sans font-medium text-gray-300 text-sm leading-relaxed">
+                        Unleash your creative potential with cutting-edge <span className="text-white font-semibold">Apple workstations</span> and cloud-first <span className="text-accent-gold font-semibold">Google Innovation Workspace</span>. Experience industry-standard tools and technologies that prepare you for tomorrow's digital landscape.
                       </p>
                       
-                      <div className="rounded-2xl overflow-hidden h-32 bg-gray-50 border border-gray-100 relative">
-                        <img src="DSC01034.jpg.jpeg" alt="Google Lab" className="w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700" />
+                      <div className="grid grid-cols-2 gap-4">
+                        <div className="rounded-2xl overflow-hidden h-44 bg-white/5 border border-white/10 relative group/card">
+                          <img src="DSC00897.jpg.jpeg" alt="Apple Lab" className="w-full h-full object-cover group-hover/card:scale-105 transition-all duration-700" />
+                          <div className="absolute bottom-3 left-3 opacity-0 group-hover/card:opacity-100 transition-opacity duration-300">
+                            <span className="text-white text-xs font-bold bg-black/70 px-2 py-1 rounded">Apple Authorized</span>
+                          </div>
+                        </div>
+                        <div className="rounded-2xl overflow-hidden h-44 bg-white/5 border border-white/10 relative group/card">
+                          <img src="DSC01034.jpg.jpeg" alt="Google Lab" className="w-full h-full object-cover group-hover/card:scale-105 transition-all duration-700" />
+                          <div className="absolute bottom-3 left-3 opacity-0 group-hover/card:opacity-100 transition-opacity duration-300">
+                            <span className="text-white text-xs font-bold bg-black/70 px-2 py-1 rounded">Chrome Lab</span>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div className="flex items-center gap-4 pt-4 border-t border-white/10">
+                        <div className="flex items-center gap-2">
+                          <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
+                          <span className="text-gray-300 text-xs font-medium">State-of-the-art Facilities</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse" />
+                          <span className="text-gray-300 text-xs font-medium">Industry Integration</span>
+                        </div>
                       </div>
                     </div>
                   </div>

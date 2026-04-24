@@ -1,11 +1,10 @@
-import React from "react";
 import { ScrollReveal } from "../../../components/ScrollReveal";
 
 const prospects = [
   {
     title: "Communication Design",
-    color: "bg-primary-blue",
-    textColor: "text-white",
+    color: "bg-accent-gold",
+    textColor: "text-[#0d244b]",
     roles: [
       "UI/UX Designer",
       "Graphic Designer",
@@ -37,7 +36,7 @@ const prospects = [
 
 export const CareerProspectsSection = () => {
   return (
-    <section className="py-24 bg-[#fafafa] relative overflow-hidden">
+    <section className="py-24 bg-primary-blue relative overflow-hidden">
       {/* Decorative background shapes */}
       <div className="absolute top-1/2 left-0 w-64 h-64 bg-accent-gold/5 rounded-full -translate-x-1/2 -translate-y-1/2" />
       <div className="absolute top-1/2 right-0 w-96 h-96 bg-[#0d244b]/5 rounded-full translate-x-1/2 -translate-y-1/2" />
@@ -45,10 +44,10 @@ export const CareerProspectsSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="mb-16">
           <ScrollReveal direction="left">
-            <h2 className="text-4xl sm:text-6xl font-black text-[#0d244b] tracking-tighter mb-4 uppercase">
-              Your Career <span className="text-accent-gold">Prospects</span>
+            <h2 className="text-4xl sm:text-6xl font-black text-white tracking-tighter mb-4 uppercase">
+              Your Career <span className="text-accent-gold font-serif italic font-normal">prospects</span>
             </h2>
-            <p className="text-gray-500 font-bold tracking-widest uppercase">Graduates are prepared for thriving roles including:</p>
+            <p className="text-white/80 font-bold tracking-widest uppercase">Graduates are prepared for thriving roles including:</p>
           </ScrollReveal>
         </div>
 

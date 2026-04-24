@@ -1,9 +1,8 @@
-import { Card, CardContent } from "../../../../components/ui/card";
 
 const graduateCompanies = [
   { name: "Google", logo: "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" },
   { name: "Microsoft", logo: "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" },
-  { name: "Adobe", logo: "https://upload.wikimedia.org/wikipedia/commons/8/8d/Adobe_Corporate_Logo.svg" },
+  { name: "Adobe", logo: "public/Adobe.png" },
   { name: "Amazon", logo: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" },
   { name: "Netflix", logo: "https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" },
   { name: "Meta", logo: "https://upload.wikimedia.org/wikipedia/commons/7/7b/Meta_Platforms_Inc._logo.svg" },
@@ -12,10 +11,10 @@ const graduateCompanies = [
 ];
 
 const hiringPartners = [
-  { name: "TCS", logo: "https://upload.wikimedia.org/wikipedia/commons/b/b1/Tata_Consultancy_Services_Logo.svg" },
-  { name: "Adobe", logo: "https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Experience_Cloud_logo.svg" },
-  { name: "HCL", logo: "https://upload.wikimedia.org/wikipedia/commons/8/84/HCL_Technologies_logo.svg" },
-  { name: "Deloitte", logo: "https://upload.wikimedia.org/wikipedia/commons/5/56/Deloitte.svg" },
+  { name: "TCS", logo: "/TCS.png" },
+  { name: "Adobe", logo: "public/Adobe.png" },
+  { name: "HCL", logo: "/HCL.png" },
+  { name: "Deloitte", logo: "/Deloitte.png" },
   { name: "Accenture", logo: "https://upload.wikimedia.org/wikipedia/commons/c/cd/Accenture.svg" },
   { name: "Wipro", logo: "https://upload.wikimedia.org/wikipedia/commons/a/a0/Wipro_Primary_Logo_Color_RGB.svg" }
 ];
@@ -50,8 +49,16 @@ export const IndustryPartnersSection = (): JSX.Element => {
                   <img
                     src={company.logo}
                     alt={company.name}
-                    className="h-10 sm:h-12 lg:h-16 object-contain"
+                    className="h-10 sm:h-12 lg:h-16 w-auto object-contain transition-all duration-300 hover:scale-110"
+                    loading="lazy"
+                    onError={(e) => {
+                      e.currentTarget.style.display = 'none';
+                      e.currentTarget.nextElementSibling?.classList.remove('hidden');
+                    }}
                   />
+                  <div className="hidden text-xs font-bold text-gray-600 text-center">
+                    {company.name}
+                  </div>
                 </div>
               ))}
             </div>
@@ -68,8 +75,16 @@ export const IndustryPartnersSection = (): JSX.Element => {
                   <img
                     src={partner.logo}
                     alt={partner.name}
-                    className="h-10 sm:h-12 lg:h-16 object-contain"
+                    className="h-10 sm:h-12 lg:h-16 w-auto object-contain transition-all duration-300 hover:scale-110"
+                    loading="lazy"
+                    onError={(e) => {
+                      e.currentTarget.style.display = 'none';
+                      e.currentTarget.nextElementSibling?.classList.remove('hidden');
+                    }}
                   />
+                  <div className="hidden text-xs font-bold text-gray-600 text-center">
+                    {partner.name}
+                  </div>
                 </div>
               ))}
             </div>
