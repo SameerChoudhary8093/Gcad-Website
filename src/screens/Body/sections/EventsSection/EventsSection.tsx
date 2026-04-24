@@ -77,14 +77,14 @@ export const EventsSection = (): JSX.Element => {
                 {/* Accreditation Overlay from Image 3 */}
                 <div className="mt-16 pt-12 border-t border-gray-100 flex items-center gap-8 opacity-80">
                   <div className="flex items-center gap-6">
-                    <img src="public/nirf.png" alt="NIRF" className="h-12 w-auto object-contain" />
+                    <img src="/nirf.png" alt="NIRF" className="h-12 w-auto object-contain" />
                     <div className="w-px h-10 bg-gray-200" />
-                    <img src="public/NACC.png" alt="NAAC" className="h-12 w-auto object-contain" />
+                    <img src="/NACC.png" alt="NAAC" className="h-12 w-auto object-contain" />
                     <div className="w-px h-10 bg-gray-200" />
-                    <img src="public/gcad-logo.png" alt="GCAD" className="h-12 w-auto object-contain" />
+                    <img src="/gcad-logo.png" alt="GCAD" className="h-12 w-auto object-contain" />
                   </div>
                   <div className="w-px h-10 bg-gray-200" />
-                  <img src="public/SGVU.png" alt="SGVU" className="h-12 w-auto object-contain" />
+                  <img src="/SGVU.png" alt="SGVU" className="h-12 w-auto object-contain" />
                 </div>
               </div>
             </ScrollReveal>

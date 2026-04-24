@@ -1,10 +1,10 @@
 import { ScrollReveal } from "../../../../components/ScrollReveal";
 
 const accreditations = [
-  { name: "UGC", logo: "public/UGC.jpg" },
-  { name: "AICTE", logo: "public/AICTE.jpg" },
-  { name: "NIRF", logo: "public/nirf.png" },
-  { name: "BCI", logo: "public/BCI.jpg" },
+  { name: "UGC", logo: "/UGC.jpg" },
+  { name: "AICTE", logo: "/AICTE.jpg" },
+  { name: "NIRF", logo: "/nirf.png" },
+  { name: "BCI", logo: "/BCI.jpg" },
 ];
 
 export const ApprovalSection = (): JSX.Element => {

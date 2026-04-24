@@ -2,7 +2,7 @@
 const graduateCompanies = [
   { name: "Google", logo: "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" },
   { name: "Microsoft", logo: "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" },
-  { name: "Adobe", logo: "public/Adobe.png" },
+  { name: "Adobe", logo: "/Adobe.png" },
   { name: "Amazon", logo: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" },
   { name: "Netflix", logo: "https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" },
   { name: "Meta", logo: "https://upload.wikimedia.org/wikipedia/commons/7/7b/Meta_Platforms_Inc._logo.svg" },
@@ -12,7 +12,7 @@ const graduateCompanies = [
 
 const hiringPartners = [
   { name: "TCS", logo: "/TCS.png" },
-  { name: "Adobe", logo: "public/Adobe.png" },
+  { name: "Adobe", logo: "/Adobe.png" },
   { name: "HCL", logo: "/HCL.png" },
   { name: "Deloitte", logo: "/Deloitte.png" },
   { name: "Accenture", logo: "https://upload.wikimedia.org/wikipedia/commons/c/cd/Accenture.svg" },
