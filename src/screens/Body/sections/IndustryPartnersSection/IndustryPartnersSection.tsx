@@ -2,7 +2,6 @@
 const graduateCompanies = [
   { name: "Google", logo: "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" },
   { name: "Microsoft", logo: "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" },
-  { name: "Adobe", logo: "/Adobe.png" },
   { name: "Amazon", logo: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" },
   { name: "Netflix", logo: "https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" },
   { name: "Meta", logo: "https://upload.wikimedia.org/wikipedia/commons/7/7b/Meta_Platforms_Inc._logo.svg" },
@@ -23,7 +22,7 @@ export const IndustryPartnersSection = (): JSX.Element => {
   return (
     <section id="placements" className="flex flex-col w-full items-start px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24 bg-white relative overflow-hidden">
       <div className="absolute top-0 left-0 w-64 h-64 bg-accent-gold/5 rounded-full blur-3xl pointer-events-none" />
-      
+
       <div className="flex flex-col max-w-screen-xl items-start gap-12 lg:gap-16 w-full mx-auto relative z-10">
         <div className="flex flex-col items-center gap-2 self-stretch w-full">
           <p className="font-sans font-bold text-accent-gold text-sm sm:text-base text-center tracking-[4px] leading-6 uppercase">
@@ -37,10 +36,10 @@ export const IndustryPartnersSection = (): JSX.Element => {
 
         {/* Bidirectional Logo Marquees */}
         <div className="flex flex-col gap-12 sm:gap-16 w-full py-8 border-y border-gray-100 overflow-hidden">
-          
+
           {/* Row 1: Graduates - Slides Left */}
           <div className="relative w-full">
-             <div className="flex gap-16 sm:gap-24 lg:gap-32 animate-marquee-left whitespace-nowrap items-center">
+            <div className="flex gap-16 sm:gap-24 lg:gap-32 animate-marquee-left whitespace-nowrap items-center">
               {[...graduateCompanies, ...graduateCompanies].map((company, index) => (
                 <div
                   key={`grad-${index}`}
@@ -66,7 +65,7 @@ export const IndustryPartnersSection = (): JSX.Element => {
 
           {/* Row 2: Hiring Partners - Slides Right */}
           <div className="relative w-full">
-             <div className="flex gap-16 sm:gap-24 lg:gap-32 animate-marquee-right whitespace-nowrap items-center">
+            <div className="flex gap-16 sm:gap-24 lg:gap-32 animate-marquee-right whitespace-nowrap items-center">
               {[...hiringPartners, ...hiringPartners, ...hiringPartners].map((partner, index) => (
                 <div
                   key={`partner-${index}`}

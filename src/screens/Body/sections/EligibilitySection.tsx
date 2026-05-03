@@ -26,7 +26,7 @@ export const EligibilitySection = () => {
   return (
     <section className="py-24 bg-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Admission Process */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-24 items-center">
           <ScrollReveal direction="left">
@@ -50,12 +50,12 @@ export const EligibilitySection = () => {
               </div>
             </div>
           </ScrollReveal>
-          
+
           <ScrollReveal direction="right">
-             <div className="relative rounded-[40px] overflow-hidden shadow-2xl">
-                <img src="DSC00919.jpg.jpeg" alt="Admission" className="w-full h-auto" />
-                <div className="absolute inset-0 bg-accent-gold/10 mix-blend-multiply" />
-             </div>
+            <div className="relative rounded-[40px] overflow-hidden shadow-2xl">
+              <img src="DSC00919.jpg.jpeg" alt="Admission" className="w-full h-auto" />
+              <div className="absolute inset-0 bg-accent-gold/10 mix-blend-multiply" />
+            </div>
           </ScrollReveal>
         </div>
 
@@ -70,15 +70,15 @@ export const EligibilitySection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {eligibility.map((item, index) => (
-            <ScrollReveal 
-              key={index} 
-              direction="up" 
+            <ScrollReveal
+              key={index}
+              direction="up"
               delay={index * 200}
             >
               <div className={`${item.color} ${item.textColor} p-10 rounded-[40px] h-full shadow-xl hover:scale-105 transition-transform duration-500 relative overflow-hidden group`}>
                 {/* Bauhaus Circle */}
                 <div className="absolute top-[-20px] right-[-20px] w-24 h-24 bg-white/10 rounded-full group-hover:scale-150 transition-transform duration-700" />
-                
+
                 <h3 className="text-2xl font-black mb-6 uppercase tracking-tight relative z-10">
                   {item.program}
                 </h3>

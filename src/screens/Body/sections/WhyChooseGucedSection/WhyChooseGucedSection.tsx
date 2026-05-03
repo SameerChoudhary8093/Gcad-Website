@@ -6,7 +6,7 @@ const reasons = [
   "Startup & Incubation Support",
   "50% Learning continues outside the classroom",
   "Continuous Portfolio creation with Real Projects",
-  "2nd year onwards Live projects & internships",
+  "1st year onwards Live projects & internships",
   "Industry visits, workshops, field trips, international exposure, live industry and social projects",
 ];
 
@@ -51,7 +51,7 @@ export const WhyChooseGucedSection = (): JSX.Element => {
           </ul>
 
           <ScrollReveal direction="up" delay={600}>
-            <Button 
+            <Button
               onClick={() => {
                 const element = document.getElementById("hero-section");
                 if (element) {
