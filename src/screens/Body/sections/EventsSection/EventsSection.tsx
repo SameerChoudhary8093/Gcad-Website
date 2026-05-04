@@ -74,17 +74,17 @@ export const EventsSection = (): JSX.Element => {
                   ))}
                 </ul>
 
-                {/* Accreditation Overlay from Image 3 */}
-                <div className="mt-16 pt-12 border-t border-gray-100 flex items-center gap-8 opacity-80">
-                  <div className="flex items-center gap-6">
-                    <img src="/nirf.png" alt="NIRF" className="h-12 w-auto object-contain" />
-                    <div className="w-px h-10 bg-gray-200" />
-                    <img src="/NACC.png" alt="NAAC" className="h-12 w-auto object-contain" />
-                    <div className="w-px h-10 bg-gray-200" />
-                    <img src="/gcad-logo.png" alt="GCAD" className="h-12 w-auto object-contain" />
+                {/* Accreditation Overlay */}
+                <div className="mt-16 pt-12 border-t border-gray-100 flex flex-wrap items-center justify-center sm:justify-start gap-8 sm:gap-12 opacity-90">
+                  <div className="flex items-center gap-6 sm:gap-8 flex-wrap justify-center sm:justify-start">
+                    <img src="/nirf.png" alt="NIRF" className="h-10 sm:h-14 w-auto object-contain hover:scale-110 transition-transform" />
+                    <div className="hidden sm:block w-px h-10 bg-gray-200" />
+                    <img src="/NACC.png" alt="NAAC" className="h-12 sm:h-16 w-auto object-contain hover:scale-110 transition-transform" />
+                    <div className="hidden sm:block w-px h-10 bg-gray-200" />
+                    <img src="/SGVU.png" alt="SGVU" className="h-12 sm:h-16 w-auto object-contain hover:scale-110 transition-transform" />
+                    <div className="hidden sm:block w-px h-10 bg-gray-200" />
+                    <img src="/gcad-logo.png" alt="GCAD" className="h-10 sm:h-14 w-auto object-contain hover:scale-110 transition-transform" />
                   </div>
-                  <div className="w-px h-10 bg-gray-200" />
-                  <img src="/SGVU.png" alt="SGVU" className="h-12 w-auto object-contain" />
                 </div>
               </div>
             </ScrollReveal>

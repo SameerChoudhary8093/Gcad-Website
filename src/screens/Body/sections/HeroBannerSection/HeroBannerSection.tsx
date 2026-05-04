@@ -55,7 +55,7 @@ export const HeroBannerSection = (): JSX.Element => {
 
       {/* Content */}
       <div className="relative z-10 w-full py-8 max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+        <div className="flex flex-col-reverse lg:grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
 
           {/* Left: Hero text */}
           <div className="flex flex-col items-start gap-6 w-full lg:col-span-7">

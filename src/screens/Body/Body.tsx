@@ -152,6 +152,11 @@ export const Body = (): JSX.Element => {
         {/* The GCAD Difference (NEW) */}
         <TheGcadDifferenceSection />
 
+        {/* Section 4: Adobe & Macbook - Dark background (MOVED HERE) */}
+        <div className="bg-[#1a1a1a]">
+          <AdobePartnershipSection />
+        </div>
+
         {/* Section 1: Why Choose - Blue background */}
         <div className="bg-primary-blue text-white">
           <WhyChooseGucedSection />
@@ -165,17 +170,9 @@ export const Body = (): JSX.Element => {
         {/* Career Prospects (NEW) */}
         <CareerProspectsSection />
 
-        {/* Approval Section */}
-        <ApprovalSection />
-
         {/* Section 3: Coursera Partnership - Blue background */}
         <div className="bg-primary-blue text-white">
           <CourseraPartnershipSection />
-        </div>
-
-        {/* Section 4: Adobe & Macbook - Dark background */}
-        <div className="bg-[#1a1a1a]">
-          <AdobePartnershipSection />
         </div>
 
         {/* Section 5: Industry Partners - White background */}

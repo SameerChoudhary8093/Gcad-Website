@@ -4,11 +4,10 @@ import { ScrollReveal } from "../../../../components/ScrollReveal";
 const programmes = [
   {
     image: "DSC00937.jpg.jpeg",
-    title: "Bachelor of Design\n(Hons.)",
+    title: "B.Des (Hons.)\nBachelor of Design",
     specializations: [
       "Fashion & Lifestyle Accessories Design",
       "Communication Design",
-      // "Interior & Graphic Design",
     ],
     label: "4 YEAR INTEGRATED",
   },
@@ -24,11 +23,9 @@ const programmes = [
   },
   {
     image: "DSC00951.jpg.jpeg",
-    title: "Master of Design",
+    title: "M.Des\nMaster of Design",
     specializations: [
       "Communication Design",
-      // "Design Management & Innovation",
-      // "Advanced Interaction Design",
     ],
     label: "2 YEAR SPECIALIST MASTER'S",
   },
