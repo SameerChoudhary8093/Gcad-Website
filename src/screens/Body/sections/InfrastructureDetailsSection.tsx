@@ -5,13 +5,13 @@ const labs = [
     title: "Apple MAC Lab",
     subtitle: "Authorized Training Centre",
     icon: "🍎",
-    image: "DSC00897.jpg.jpeg",
+    image: "Apple-lab.JPG",
   },
   {
     title: "Google",
     subtitle: "Digital Innovation workspace",
     icon: "💻",
-    image: "DSC01034.jpg.jpeg",
+    image: "google-chrome-lab.jpg",
   },
   {
     title: "Fashion & Textile Studio",

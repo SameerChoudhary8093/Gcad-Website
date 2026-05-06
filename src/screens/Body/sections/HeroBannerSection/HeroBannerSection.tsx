@@ -34,7 +34,7 @@ export const HeroBannerSection = (): JSX.Element => {
       {/* Background with image and geometric shapes overlay */}
       <div className="absolute inset-0 w-full h-full z-0">
         <img
-          src="DSC00919.jpg.jpeg"
+          src="gcad-building.jpg"
           alt="GCAD Campus"
           className="w-full h-full object-cover"
           loading="eager"
@@ -166,25 +166,25 @@ export const HeroBannerSection = (): JSX.Element => {
       <div className="w-full mt-12 lg:mt-24 px-4 sm:px-6 lg:px-8">
         <ScrollReveal direction="up" delay={1200}>
           <div className="max-w-screen-xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 relative z-10">
-            {/* Alternating Cards: Blue and White/Yellow */}
-            <div className="bg-[#0d244b] text-white p-8 rounded-3xl shadow-2xl border border-white/10 flex flex-col gap-2 items-center text-center">
+            {/* Alternating Cards: White and Yellow */}
+            <div className="bg-white text-[#0d244b] p-8 rounded-3xl shadow-2xl border border-white/10 flex flex-col gap-2 items-center text-center">
               <span className="text-4xl sm:text-5xl font-black tracking-tighter">13:1</span>
               <span className="text-[10px] sm:text-xs font-bold text-accent-gold tracking-[3px] uppercase">Ratio</span>
             </div>
             
-            <div className="bg-white text-[#0d244b] p-8 rounded-3xl shadow-2xl border border-gray-100 flex flex-col gap-2 items-center text-center">
+            <div className="bg-accent-gold text-[#0d244b] p-8 rounded-3xl shadow-2xl border border-white/20 flex flex-col gap-2 items-center text-center">
               <span className="text-4xl sm:text-5xl font-black tracking-tighter">40+</span>
-              <span className="text-[10px] sm:text-xs font-bold text-gray-400 tracking-[3px] uppercase">Labs</span>
+              <span className="text-[10px] sm:text-xs font-bold text-[#0d244b]/60 tracking-[3px] uppercase">Labs</span>
+            </div>
+
+            <div className="bg-white text-[#0d244b] p-8 rounded-3xl shadow-2xl border border-gray-100 flex flex-col gap-2 items-center text-center">
+              <span className="text-4xl sm:text-5xl font-black tracking-tighter">100+</span>
+              <span className="text-[10px] sm:text-xs font-bold text-accent-gold tracking-[3px] uppercase">Partners</span>
             </div>
 
             <div className="bg-accent-gold text-[#0d244b] p-8 rounded-3xl shadow-2xl border border-white/20 flex flex-col gap-2 items-center text-center">
-              <span className="text-4xl sm:text-5xl font-black tracking-tighter">100+</span>
-              <span className="text-[10px] sm:text-xs font-bold text-[#0d244b]/60 tracking-[3px] uppercase">Partners</span>
-            </div>
-
-            <div className="bg-[#0d244b] text-white p-8 rounded-3xl shadow-2xl border border-white/10 flex flex-col gap-2 items-center text-center">
               <span className="text-4xl sm:text-5xl font-black tracking-tighter">15+</span>
-              <span className="text-[10px] sm:text-xs font-bold text-accent-gold tracking-[3px] uppercase">Exp.</span>
+              <span className="text-[10px] sm:text-xs font-bold text-[#0d244b]/60 tracking-[3px] uppercase">Exp.</span>
             </div>
           </div>
         </ScrollReveal>

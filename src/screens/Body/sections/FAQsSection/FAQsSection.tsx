@@ -125,13 +125,13 @@ export const FAQsSection = (): JSX.Element => {
                       
                       <div className="grid grid-cols-2 gap-4">
                         <div className="rounded-2xl overflow-hidden h-44 bg-white/5 border border-white/10 relative group/card">
-                          <img src="DSC00897.jpg.jpeg" alt="Apple Lab" className="w-full h-full object-cover group-hover/card:scale-105 transition-all duration-700" />
+                          <img src="Apple-lab.JPG" alt="Apple Lab" className="w-full h-full object-cover group-hover/card:scale-105 transition-all duration-700" />
                           <div className="absolute bottom-3 left-3 opacity-0 group-hover/card:opacity-100 transition-opacity duration-300">
                             <span className="text-white text-xs font-bold bg-black/70 px-2 py-1 rounded">Apple Authorized</span>
                           </div>
                         </div>
                         <div className="rounded-2xl overflow-hidden h-44 bg-white/5 border border-white/10 relative group/card">
-                          <img src="DSC01034.jpg.jpeg" alt="Google Lab" className="w-full h-full object-cover group-hover/card:scale-105 transition-all duration-700" />
+                          <img src="google-chrome-lab.jpg" alt="Google Lab" className="w-full h-full object-cover group-hover/card:scale-105 transition-all duration-700" />
                           <div className="absolute bottom-3 left-3 opacity-0 group-hover/card:opacity-100 transition-opacity duration-300">
                             <span className="text-white text-xs font-bold bg-black/70 px-2 py-1 rounded">Chrome Lab</span>
                           </div>

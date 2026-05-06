@@ -6,13 +6,17 @@ import {
 import { ScrollReveal } from "../../../../components/ScrollReveal";
 
 const mentors = [
-  { name: "DR. NEHA KAPOOR", role: "FASHION DESIGN", image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&h=250&auto=format&fit=crop" },
-  { name: "DR. SURAJ K SINGH", role: "TEXTILE TECHNOLOGY", image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=200&h=250&auto=format&fit=crop" },
-  { name: "DR. ANKUR JAIN", role: "VISUAL COMMUNICATION", image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=200&h=250&auto=format&fit=crop" },
-  { name: "DR. SARMAD MOIN", role: "INTERIOR DESIGN", image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=200&h=250&auto=format&fit=crop" },
-  { name: "DR. KISHAN KUMAR", role: "INDUSTRIAL DESIGN", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&h=250&auto=format&fit=crop" },
-  { name: "DR. GAURAV SHARMA", role: "ANIMATION LEAD", image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&h=250&auto=format&fit=crop" },
-  { name: "KRITI SHRIVASTAV", role: "CRAFT & TEXTILES", image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=200&h=250&auto=format&fit=crop" },
+  { name: "Meenakshi Singh", role: "Fashion Educator", image: "/Mentors/MeenakshiSingh.png" },
+  { name: "Rashmi Bhardwaj", role: "Textile Technologist", image: "/Mentors/RashmiBhardwaj.png" },
+  { name: "Padma Raj Kesri", role: "Visual Strategist", image: "/Mentors/PadmaRajKesri.png" },
+  { name: "Gaurav Choudhary", role: "Design Founder", image: "/Mentors/GauravChoudhary.png" },
+  { name: "Dr. Rajesh Dangoria", role: "Design Academic", image: "/Mentors/Dr.RajeshDangoria.png" },
+  { name: "Anuraag Singhal", role: "Design Consultant", image: "/Mentors/AnuraagSinghal.png" },
+  { name: "Umang Maheshwari", role: "Brand Strategist", image: "/Mentors/UmangMaheshwari.png", position: "top center" },
+  { name: "Priyanka Gahlot", role: "Design Researcher", image: "/Mentors/PriyankaGahlot.png", position: "top center" },
+  { name: "Saumya Pandey", role: "Design Curator", image: "/Mentors/SaumyaPandey.png" },
+  { name: "Aashima Arora Arya", role: "UX Designer", image: "/Mentors/AashimaAroraArya.png" },
+  { name: "Reena Bhatia", role: "Fashion Practitioner", image: "/Mentors/ReenaBhatia.png" },
 ];
 
 export const MentorshipProgramSection = (): JSX.Element => {
@@ -37,16 +41,22 @@ export const MentorshipProgramSection = (): JSX.Element => {
           </p>
         </ScrollReveal>
 
-        {/* Mentor grid: 2 cols on mobile, 4 on tablet, 7 on desktop */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-4 sm:gap-6 pt-12 w-full">
+        {/* Mentor container: 6 on top, 5 on bottom (centered) */}
+        <div className="flex flex-wrap justify-center gap-4 sm:gap-6 pt-12 w-full">
           {mentors.map((mentor, index) => (
-            <ScrollReveal key={`mentor-${index}`} direction="up" delay={index * 100} className="w-full">
+            <ScrollReveal 
+              key={`mentor-${index}`} 
+              direction="up" 
+              delay={index * 100} 
+              className="w-[calc(50%-1rem)] sm:w-[calc(33.33%-1.5rem)] lg:w-[calc(16.66%-1.5rem)] min-w-[140px] sm:min-w-[160px]"
+            >
               <div className="group flex flex-col items-center w-full cursor-pointer">
                 <div className="relative w-full aspect-[4/5] mb-4 overflow-hidden rounded-2xl sm:rounded-3xl shadow-lg transition-all duration-500 group-hover:shadow-xl group-hover:-translate-y-2 border border-gray-100">
-                  <img 
-                    src={mentor.image} 
-                    alt={mentor.name} 
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-110" 
+                  <img
+                    src={mentor.image}
+                    alt={mentor.name}
+                    className="w-full h-full object-cover grayscale transition-all duration-700 scale-105 group-hover:scale-110 origin-top"
+                    style={{ objectPosition: mentor.position || 'center' }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0D244B]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </div>
