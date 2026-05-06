@@ -4,22 +4,26 @@ const studios = [
   {
     title: "Fashion Lab",
     description: "Industry-standard garment construction and pattern making studio.",
-    bgImage: "DSC00941.jpg.jpeg",
+    bgImage: "DSC00988.jpg.jpeg",
+    objectPosition: "33% center",
   },
   {
     title: "iMac Design Studio",
     description: "High-end computing lab equipped with the latest Adobe Creative Suite.",
-    bgImage: "DSC00897.jpg.jpeg",
+    bgImage: "DSC00882.jpg.jpeg",
+    objectPosition: "70% center",
   },
   {
     title: "Textile Workshop",
     description: "Creative space for material exploration and textile design.",
-    bgImage: "DSC00967.jpg.jpeg",
+    bgImage: "/Images/12.jpg",
+    objectPosition: "80% center",
   },
   {
     title: "Drafting Room",
     description: "Spacious studio for technical drawing and architectural drafting.",
-    bgImage: "DSC01034.jpg.jpeg",
+    bgImage: "DSC00933.jpg.jpeg",
+    objectPosition: "70% center",
   },
 ];
 
@@ -52,9 +56,10 @@ export const WorldClassExperienceSection = (): JSX.Element => {
                 src={studio.bgImage}
                 alt={studio.title}
                 className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                style={{ objectPosition: (studio as any).objectPosition || 'center' }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0D244B] via-[#0D244B]/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-500" />
-              
+
               <div className="absolute inset-x-0 bottom-12 sm:bottom-20 px-4 sm:px-8 flex flex-col items-center text-center">
                 <h3 className="font-display font-bold text-white text-base sm:text-2xl mb-2 sm:mb-3 drop-shadow-md">
                   {studio.title}

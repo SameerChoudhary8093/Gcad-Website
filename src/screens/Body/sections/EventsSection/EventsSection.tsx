@@ -5,35 +5,35 @@ const eventList = [
   "Tattva - Essence of Design",
   "Pinkest at Rajasthan International Center",
   "GCAD attended NayaPun",
+  "GCAD hosted a master class on Design Thinking",
   "Students attended the Shipkari Textile exhibition",
   "Students of GCAD participated as volunteers at the Nine Dot Squares exhibition",
   "Tarkashi workshop and industry visit by GCAD students at Mr. Ram Dayal sharma",
-  "GCAD hosted a master class on Design Thinking",
   "GCAD attended the session I-can methodology for creative problem solving by Kiran Bir Sethi at IICD campus",
 ];
 
 const collageImages = [
-  "DSC00882.jpg.jpeg",
-  "DSC00919.jpg.jpeg",
-  "DSC00933.jpg.jpeg",
-  "DSC00937.jpg.jpeg",
-  "DSC00951.jpg.jpeg",
-  "DSC00967.jpg.jpeg",
-  "DSC00988.jpg.jpeg",
-  "DSC01034.jpg.jpeg",
+  "Images/5.jpg",
+  "Images/6.jpg",
+  "Images/7.jpg",
+  "Images/8.jpg",
+  "Images/16.jpg",
+  "Images/18.jpg",
+  "Images/27.jpg",
+  "Images/28.jpg",
 ];
 
 export const EventsSection = (): JSX.Element => {
   return (
     <section className="relative w-full py-20 sm:py-32 bg-[#fff5f7] overflow-hidden">
       {/* Background Image Collage */}
-      <div className="absolute inset-0 grid grid-cols-4 sm:grid-cols-6 lg:grid-cols-8 gap-2 opacity-30 grayscale hover:grayscale-0 transition-all duration-1000">
+      <div className="absolute inset-0 grid grid-cols-4 sm:grid-cols-6 lg:grid-cols-8 gap-2 opacity-20 transition-all duration-1000">
         {collageImages.map((img, i) => (
           <div key={i} className="relative h-64 overflow-hidden">
             <img src={img} alt="Event" className="w-full h-full object-cover" />
           </div>
         ))}
-        {collageImages.map((img, i) => (
+        {[...collageImages].reverse().map((img, i) => (
           <div key={`dup-${i}`} className="relative h-64 overflow-hidden">
             <img src={img} alt="Event" className="w-full h-full object-cover" />
           </div>
@@ -43,11 +43,11 @@ export const EventsSection = (): JSX.Element => {
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-12">
 
-          {/* Left: Decorative Image Box (Optional based on image 3) */}
+          {/* Left: Decorative Image Box */}
           <div className="hidden lg:block w-1/3">
             <ScrollReveal direction="left">
               <div className="relative w-full aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl border-8 border-white">
-                <img src="DSC00951.jpg.jpeg" alt="Event Highlights" className="w-full h-full object-cover" />
+                <img src="Images/9.jpg" alt="Event Highlights" className="w-full h-full object-cover" />
               </div>
             </ScrollReveal>
           </div>
@@ -75,16 +75,14 @@ export const EventsSection = (): JSX.Element => {
                 </ul>
 
                 {/* Accreditation Overlay */}
-                <div className="mt-16 pt-12 border-t border-gray-100 flex flex-wrap items-center justify-center sm:justify-start gap-8 sm:gap-12 opacity-90">
-                  <div className="flex items-center gap-6 sm:gap-8 flex-wrap justify-center sm:justify-start">
-                    <img src="/nirf.png" alt="NIRF" className="h-10 sm:h-14 w-auto object-contain hover:scale-110 transition-transform" />
-                    <div className="hidden sm:block w-px h-10 bg-gray-200" />
-                    <img src="/NACC.png" alt="NAAC" className="h-12 sm:h-16 w-auto object-contain hover:scale-110 transition-transform" />
-                    <div className="hidden sm:block w-px h-10 bg-gray-200" />
-                    <img src="/SGVU.png" alt="SGVU" className="h-12 sm:h-16 w-auto object-contain hover:scale-110 transition-transform" />
-                    <div className="hidden sm:block w-px h-10 bg-gray-200" />
-                    <img src="/gcad-logo.png" alt="GCAD" className="h-10 sm:h-14 w-auto object-contain hover:scale-110 transition-transform" />
-                  </div>
+                <div className="mt-16 pt-12 border-t border-gray-100 flex items-center justify-center gap-4 sm:gap-8 opacity-90">
+                  <img src="/nirf.png" alt="NIRF" className="h-6 sm:h-10 w-auto object-contain hover:scale-110 transition-transform" />
+                  <div className="w-px h-6 sm:h-8 bg-gray-200" />
+                  <img src="/NACC.png" alt="NAAC" className="h-8 sm:h-12 w-auto object-contain hover:scale-110 transition-transform" />
+                  <div className="w-px h-6 sm:h-8 bg-gray-200" />
+                  <img src="/SGVU.png" alt="SGVU" className="h-8 sm:h-12 w-auto object-contain hover:scale-110 transition-transform" />
+                  <div className="w-px h-6 sm:h-8 bg-gray-200" />
+                  <img src="/gcad-logo.png" alt="GCAD" className="h-6 sm:h-10 w-auto object-contain hover:scale-110 transition-transform" />
                 </div>
               </div>
             </ScrollReveal>

@@ -3,7 +3,7 @@ import { ScrollReveal } from "../../../../components/ScrollReveal";
 
 const programmes = [
   {
-    image: "DSC00937.jpg.jpeg",
+    image: "Images/20.jpg",
     title: "B.Des (Hons.)\nBachelor of Design",
     specializations: [
       "Fashion & Lifestyle Accessories Design",
@@ -12,7 +12,7 @@ const programmes = [
     label: "4 YEAR INTEGRATED",
   },
   {
-    image: "DSC00941.jpg.jpeg",
+    image: "Images/21.jpg",
     title: "Diploma / Advanced Diploma / B.Voc",
     specializations: [
       "Fashion Design",
@@ -22,7 +22,7 @@ const programmes = [
     label: "SKILL-FOCUSED CERTIFICATES",
   },
   {
-    image: "DSC00951.jpg.jpeg",
+    image: "Images/27.jpg",
     title: "M.Des\nMaster of Design",
     specializations: [
       "Communication Design",
@@ -103,7 +103,7 @@ export const AcademicProgrammesSection = (): JSX.Element => {
         <ScrollReveal direction="up" delay={600} className="w-full">
           <div className="flex flex-col items-center w-full">
             <a
-              href="https://drive.google.com/drive/u/0/folders/1tXSX_Vqdl7PbvEK0OFob2lOaZoCDrecX"
+              href="https://drive.google.com/file/d/1JnKUH6FKHjsyEXiuFb0oMILBis44qFWi/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex gap-3 px-8 sm:px-12 py-4 sm:py-5 bg-white rounded-lg items-center h-auto shadow-[0px_20px_25px_-5px_#00000033] hover:bg-gray-100 transition-all duration-300 hover:scale-105"

@@ -13,9 +13,9 @@ import {
 import { ScrollReveal } from "../../../../components/ScrollReveal";
 
 const formFields = [
-  { id: "fullName",  label: "FULL NAME",       placeholder: "Enter your name",   type: "text"  },
-  { id: "email",     label: "EMAIL ADDRESS",   placeholder: "name@example.com",  type: "email" },
-  { id: "phone",     label: "PHONE NUMBER",    placeholder: "+91 00000 00000",   type: "tel"   },
+  { id: "fullName", label: "FULL NAME", placeholder: "Enter your name", type: "text" },
+  { id: "email", label: "EMAIL ADDRESS", placeholder: "name@example.com", type: "email" },
+  { id: "phone", label: "PHONE NUMBER", placeholder: "+91 00000 00000", type: "tel" },
 ];
 
 const courseOptions = [
@@ -34,7 +34,7 @@ export const HeroBannerSection = (): JSX.Element => {
       {/* Background with image and geometric shapes overlay */}
       <div className="absolute inset-0 w-full h-full z-0">
         <img
-          src="gcad-building.jpg"
+          src="Images/1.jpeg"
           alt="GCAD Campus"
           className="w-full h-full object-cover"
           loading="eager"
@@ -96,8 +96,8 @@ export const HeroBannerSection = (): JSX.Element => {
                 </div>
                 <div className="w-[1px] h-10 bg-white/20" />
                 <div className="flex flex-col">
-                   <img src="naac-nirf.png" alt="NIRF NAAC" className="h-10 w-auto object-contain brightness-0 invert" />
-                   <span className="text-xs font-bold text-white/50 tracking-widest uppercase mt-2">Global Standards</span>
+                  <img src="naac-nirf.png" alt="NIRF NAAC" className="h-10 w-auto object-contain brightness-0 invert" />
+                  <span className="text-xs font-bold text-white/50 tracking-widest uppercase mt-2">Global Standards</span>
                 </div>
               </div>
             </ScrollReveal>
@@ -171,7 +171,7 @@ export const HeroBannerSection = (): JSX.Element => {
               <span className="text-4xl sm:text-5xl font-black tracking-tighter">13:1</span>
               <span className="text-[10px] sm:text-xs font-bold text-accent-gold tracking-[3px] uppercase">Ratio</span>
             </div>
-            
+
             <div className="bg-accent-gold text-[#0d244b] p-8 rounded-3xl shadow-2xl border border-white/20 flex flex-col gap-2 items-center text-center">
               <span className="text-4xl sm:text-5xl font-black tracking-tighter">40+</span>
               <span className="text-[10px] sm:text-xs font-bold text-[#0d244b]/60 tracking-[3px] uppercase">Labs</span>
