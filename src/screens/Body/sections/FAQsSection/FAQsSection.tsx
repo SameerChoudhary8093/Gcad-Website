@@ -61,26 +61,28 @@ export const FAQsSection = (): JSX.Element => {
                 {faqs.map((faq, index) => (
                   <div 
                     key={index} 
-                    className={`group border-b border-gray-100 transition-all duration-500 ${openIndex === index ? 'pb-4' : 'pb-0'}`}
+                    className="border-b border-gray-100"
                   >
                     <button
                       onClick={() => toggleFAQ(index)}
-                      className="w-full py-4 text-left flex items-center justify-between bg-blue-50 hover:bg-blue-100 transition-all duration-300 rounded-xl px-4"
+                      className={`w-full py-5 text-left flex items-center justify-between transition-all duration-300 rounded-xl px-4 ${openIndex === index ? 'bg-blue-100' : 'bg-blue-50 hover:bg-blue-100/50'}`}
                     >
                       <span className={`font-sans font-bold text-base sm:text-lg transition-colors duration-300 ${openIndex === index ? 'text-accent-gold' : 'text-primary-blue'}`}>
                         <span className="text-accent-gold/40 mr-3 font-serif italic">{String(index + 1).padStart(2, '0')}</span>
                         {faq.question}
                       </span>
-                      <div className={`flex-shrink-0 w-8 h-8 rounded-full border border-accent-gold/20 flex items-center justify-center transition-transform duration-500 ${openIndex === index ? 'rotate-180 bg-accent-gold' : ''}`}>
+                      <div className={`flex-shrink-0 w-8 h-8 rounded-full border border-accent-gold/20 flex items-center justify-center transition-all duration-500 ${openIndex === index ? 'rotate-180 bg-accent-gold' : ''}`}>
                         <ChevronDown className={`w-4 h-4 transition-colors ${openIndex === index ? 'text-white' : 'text-accent-gold'}`} />
                       </div>
                     </button>
                     
-                    <div className={`overflow-hidden transition-all duration-500 px-4 ${openIndex === index ? 'max-h-96 opacity-100 mt-2' : 'max-h-0 opacity-0'}`}>
-                      <div className="bg-blue-50 rounded-lg p-4">
-                        <p className="font-sans font-medium text-gray-700 text-sm sm:text-base leading-relaxed border-l-2 border-accent-gold pl-4 py-1">
-                          {faq.answer}
-                        </p>
+                    <div className={`grid transition-all duration-500 ease-in-out ${openIndex === index ? 'grid-rows-[1fr] opacity-100 mb-4' : 'grid-rows-[0fr] opacity-0'}`}>
+                      <div className="overflow-hidden">
+                        <div className="bg-blue-50/50 rounded-lg p-4 mt-2">
+                          <p className="font-sans font-medium text-gray-700 text-sm sm:text-base leading-relaxed border-l-2 border-accent-gold pl-4 py-1">
+                            {faq.answer}
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>

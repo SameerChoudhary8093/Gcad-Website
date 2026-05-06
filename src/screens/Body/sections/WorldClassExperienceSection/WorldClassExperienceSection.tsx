@@ -43,7 +43,7 @@ export const WorldClassExperienceSection = (): JSX.Element => {
       </div>
 
       {/* Studio Cards Grid - Vertical Pill Style */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 w-full max-w-screen-xl mx-auto h-[450px] sm:h-[650px]">
+      <div className="grid grid-cols-4 gap-2 sm:gap-6 w-full max-w-screen-xl mx-auto h-[280px] sm:h-[650px]">
         {studios.map((studio, index) => (
           <ScrollReveal
             key={index}
@@ -51,7 +51,7 @@ export const WorldClassExperienceSection = (): JSX.Element => {
             delay={index * 150}
             className="relative h-full"
           >
-            <div className={`group relative w-full h-full overflow-hidden rounded-[80px] sm:rounded-[200px] border-2 border-white/10 hover:border-accent-gold transition-all duration-700 shadow-2xl ${index % 2 === 1 ? 'mt-8 sm:mt-12' : 'mb-8 sm:mb-12'}`}>
+            <div className={`group relative w-full h-full overflow-hidden rounded-[40px] sm:rounded-[200px] border border-white/10 hover:border-accent-gold transition-all duration-700 shadow-2xl ${index % 2 === 1 ? 'mt-4 sm:mt-12' : 'mb-4 sm:mb-12'}`}>
               <img
                 src={studio.bgImage}
                 alt={studio.title}
@@ -60,11 +60,11 @@ export const WorldClassExperienceSection = (): JSX.Element => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0D244B] via-[#0D244B]/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-500" />
 
-              <div className="absolute inset-x-0 bottom-12 sm:bottom-20 px-4 sm:px-8 flex flex-col items-center text-center">
-                <h3 className="font-display font-bold text-white text-base sm:text-2xl mb-2 sm:mb-3 drop-shadow-md">
+              <div className="absolute inset-x-0 bottom-4 sm:bottom-20 px-2 sm:px-8 flex flex-col items-center text-center">
+                <h3 className="font-display font-bold text-white text-[10px] sm:text-2xl mb-1 sm:mb-3 drop-shadow-md leading-tight">
                   {studio.title}
                 </h3>
-                <p className="font-sans font-normal text-white/80 text-[10px] sm:text-xs leading-relaxed max-w-[120px] sm:max-w-[180px] opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500">
+                <p className="font-sans font-normal text-white/80 text-[8px] sm:text-xs leading-tight max-w-[120px] sm:max-w-[180px] opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 hidden sm:block">
                   {studio.description}
                 </p>
               </div>

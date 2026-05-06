@@ -113,15 +113,15 @@ export const InfrastructureDetailsSection = () => {
             <div className="flex flex-col lg:flex-row items-center gap-10 relative z-10">
               <div className="lg:w-1/3">
                 <h3 className="text-white text-3xl lg:text-4xl font-black tracking-tighter uppercase mb-4 leading-tight">
-                  Campus <br /> Amenities:
+                  Campus Amenities:
                 </h3>
               </div>
-              <div className="lg:w-2/3">
-                <div className="flex flex-wrap gap-3">
+              <div className="lg:w-2/3 w-full">
+                <div className="grid grid-cols-3 sm:flex sm:flex-wrap gap-2 sm:gap-3">
                   {amenities.map((amenity, idx) => (
                     <span
                       key={idx}
-                      className="px-6 py-3 bg-accent-gold hover:bg-white text-[#0d244b] border border-white/20 rounded-full font-bold text-sm transition-all cursor-pointer shadow-sm hover:shadow-md"
+                      className="flex items-center justify-center text-center px-2 py-3 sm:px-6 bg-accent-gold hover:bg-white text-[#0d244b] border border-white/20 rounded-2xl sm:rounded-full font-bold text-[8px] sm:text-sm transition-all cursor-pointer shadow-sm hover:shadow-md"
                     >
                       {amenity}
                     </span>

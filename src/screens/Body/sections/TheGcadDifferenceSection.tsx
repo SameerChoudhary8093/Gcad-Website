@@ -110,19 +110,19 @@ export const TheGcadDifferenceSection = () => {
         </div>
 
         {/* Hero-style large card for "Learning by Doing" image context */}
-        <ScrollReveal direction="up" delay={600} className="mt-20">
-          <div className="relative w-full aspect-[21/9] rounded-[40px] overflow-hidden shadow-2xl">
+        <ScrollReveal direction="up" delay={600} className="mt-12 sm:mt-20">
+          <div className="relative w-full aspect-[4/5] sm:aspect-[21/9] rounded-[30px] sm:rounded-[40px] overflow-hidden shadow-2xl">
             <img 
               src="DSC00919.jpg.jpeg" 
               alt="Learning by Doing" 
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0d244b] to-transparent opacity-80" />
-            <div className="absolute bottom-8 left-8 right-8 lg:bottom-16 lg:left-16">
-               <h4 className="text-white text-3xl lg:text-5xl font-black tracking-tighter uppercase mb-4">
-                 Where Creativity <br className="hidden sm:block" /> Meets Industry
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0d244b] via-[#0d244b]/40 to-transparent opacity-90" />
+            <div className="absolute bottom-6 left-6 right-6 sm:bottom-16 sm:left-16">
+               <h4 className="text-white text-2xl sm:text-3xl lg:text-5xl font-black tracking-tighter uppercase mb-2 sm:mb-4 leading-tight">
+                 Where Creativity <br /> Meets Industry
                </h4>
-               <p className="text-white/70 text-lg font-medium max-w-2xl">
+               <p className="text-white/80 text-sm sm:text-lg font-medium max-w-2xl leading-relaxed">
                  Our students don't just study design; they live it every day in our 130-acre design district.
                </p>
             </div>

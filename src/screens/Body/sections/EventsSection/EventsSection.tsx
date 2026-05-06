@@ -75,14 +75,14 @@ export const EventsSection = (): JSX.Element => {
                 </ul>
 
                 {/* Accreditation Overlay */}
-                <div className="mt-16 pt-12 border-t border-gray-100 flex items-center justify-center gap-4 sm:gap-8 opacity-90">
-                  <img src="/nirf.png" alt="NIRF" className="h-6 sm:h-10 w-auto object-contain hover:scale-110 transition-transform" />
-                  <div className="w-px h-6 sm:h-8 bg-gray-200" />
-                  <img src="/NACC.png" alt="NAAC" className="h-8 sm:h-12 w-auto object-contain hover:scale-110 transition-transform" />
-                  <div className="w-px h-6 sm:h-8 bg-gray-200" />
-                  <img src="/SGVU.png" alt="SGVU" className="h-8 sm:h-12 w-auto object-contain hover:scale-110 transition-transform" />
-                  <div className="w-px h-6 sm:h-8 bg-gray-200" />
-                  <img src="/gcad-logo.png" alt="GCAD" className="h-6 sm:h-10 w-auto object-contain hover:scale-110 transition-transform" />
+                <div className="mt-16 pt-12 border-t border-gray-100 flex items-center justify-center gap-2 sm:gap-8 opacity-90">
+                  <img src="/nirf.png" alt="NIRF" className="h-5 sm:h-10 w-auto object-contain hover:scale-110 transition-transform" />
+                  <div className="w-px h-5 sm:h-8 bg-gray-200" />
+                  <img src="/NACC.png" alt="NAAC" className="h-7 sm:h-12 w-auto object-contain hover:scale-110 transition-transform" />
+                  <div className="w-px h-5 sm:h-8 bg-gray-200" />
+                  <img src="/SGVU.png" alt="SGVU" className="h-7 sm:h-12 w-auto object-contain hover:scale-110 transition-transform" />
+                  <div className="w-px h-5 sm:h-8 bg-gray-200" />
+                  <img src="/gcad-logo.png" alt="GCAD" className="h-5 sm:h-10 w-auto object-contain hover:scale-110 transition-transform" />
                 </div>
               </div>
             </ScrollReveal>
